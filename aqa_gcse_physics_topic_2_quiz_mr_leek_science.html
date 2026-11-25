@@ -1,0 +1,3127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mr Leek Science — AQA GCSE Physics Topic 2: Electricity</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@700;800&display=swap" rel="stylesheet" />
+  <style>
+    /* ==========================================================================
+       MR LEEK SCIENCE — ROYAL / SAPPHIRE BLUE DESIGN TOKENS (PHYSICS TOPIC 2)
+       ========================================================================== */
+    :root {
+      --navy-950: #09152b;
+      --navy-900: #0f172a;
+      --blue-900: #1e3a8a;
+      --blue-800: #1e40af;
+      --blue-700: #1d4ed8;
+      --blue-600: #2563eb;
+      --blue-500: #3b82f6;
+      --blue-400: #60a5fa;
+
+      --blue-200: #bfdbfe;
+      --blue-100: #dbeafe;
+      --blue-50: #eff6ff;
+      --blue-tint: #f8fbff;
+
+      --bg-page: #f8fafc;
+      --slate-900: #0f172a;
+      --slate-800: #1e293b;
+      --slate-700: #334155;
+      --slate-600: #475569;
+      --slate-500: #64748b;
+      --slate-400: #94a3b8;
+      --slate-300: #cbd5e1;
+      --slate-200: #e2e8f0;
+      --slate-100: #f1f5f9;
+      --slate-50: #f8fafc;
+
+      --sky-100: #e0f2fe;
+      --sky-700: #0369a1;
+      --green-chip-bg: #dcfce7;
+      --green-chip-fg: #15803d;
+      --purple-100: #f3e8ff;
+      --purple-700: #7e22ce;
+
+      --emerald-700: #047857;
+      --emerald-600: #059669;
+      --emerald-100: #d1fae5;
+      --emerald-50: #ecfdf5;
+
+      --amber-700: #b45309;
+      --amber-600: #d97706;
+      --amber-100: #fef3c7;
+      --amber-50: #fffbeb;
+
+      --rose-700: #be123c;
+      --rose-600: #dc2626;
+      --rose-500: #ef4444;
+      --rose-200: #fecaca;
+      --rose-100: #fee2e2;
+      --rose-50: #fef2f2;
+
+      --shadow-shell: 0 10px 30px rgba(15, 23, 42, 0.08);
+      --shadow-cta: 0 6px 18px -2px rgba(29, 78, 216, 0.35);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background-color: var(--bg-page);
+      color: var(--slate-900);
+      min-height: 100vh;
+      padding: 1.5rem 1rem 3rem;
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    h1, h2, h3, h4, .heading-font {
+      font-family: "Plus Jakarta Sans", "Inter", sans-serif;
+    }
+
+    .hidden {
+      display: none !important;
+    }
+
+    /* ==========================================================================
+       CENTERED MAIN CARD CONTAINER
+       ========================================================================== */
+    .app-container {
+      max-width: 920px;
+      margin: 0 auto;
+      background: #ffffff;
+      border-radius: 16px;
+      border: 1px solid var(--slate-200);
+      box-shadow: var(--shadow-shell);
+      overflow: hidden;
+    }
+
+    /* ==========================================================================
+       TOP ROYAL / SAPPHIRE BLUE BANNER HEADER
+       ========================================================================== */
+    .banner-header {
+      background: linear-gradient(135deg, #09152b 0%, #1e3a8a 100%);
+      padding: 32px 36px;
+      color: #ffffff;
+      position: relative;
+    }
+
+    .banner-top-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-bottom: 14px;
+    }
+
+    .spec-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(255, 255, 255, 0.14);
+      border: 1px solid rgba(255, 255, 255, 0.24);
+      border-radius: 999px;
+      padding: 5px 14px;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--blue-200);
+    }
+
+    .brand-tag {
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: rgba(255, 255, 255, 0.92);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .banner-title {
+      font-size: clamp(1.5rem, 3vw, 2rem);
+      font-weight: 800;
+      color: #ffffff;
+      line-height: 1.22;
+      letter-spacing: -0.015em;
+      margin-bottom: 8px;
+    }
+
+    .banner-subtitle {
+      font-size: 0.94rem;
+      color: rgba(255, 255, 255, 0.88);
+      max-width: 800px;
+      line-height: 1.52;
+      font-weight: 400;
+    }
+
+    /* ==========================================================================
+       WHITE FORM BODY
+       ========================================================================== */
+    .card-body {
+      padding: 28px 36px 36px;
+    }
+
+    .section-block {
+      margin-bottom: 26px;
+    }
+
+    /* Row 1: Student Name & Email Address */
+    .input-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    .field-group {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .field-label {
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: var(--slate-800);
+      margin-bottom: 8px;
+    }
+
+    .field-label .req-star {
+      color: var(--blue-700);
+      margin-left: 2px;
+    }
+
+    .field-label .opt-muted {
+      color: var(--slate-400);
+      font-weight: 500;
+      margin-left: 3px;
+    }
+
+    .text-input {
+      width: 100%;
+      padding: 12px 15px;
+      font-family: inherit;
+      font-size: 0.95rem;
+      color: var(--slate-900);
+      background: #ffffff;
+      border: 1.5px solid var(--slate-300);
+      border-radius: 12px;
+      transition: border-color 0.16s ease, box-shadow 0.16s ease;
+    }
+
+    .text-input::placeholder {
+      color: var(--slate-400);
+    }
+
+    .text-input:focus {
+      outline: none;
+      border-color: var(--blue-500);
+      box-shadow: 0 0 0 3.5px rgba(59, 130, 246, 0.2);
+    }
+
+    .text-input.input-error {
+      border-color: var(--rose-500);
+      background-color: var(--rose-50);
+      box-shadow: 0 0 0 3.5px rgba(239, 68, 68, 0.16);
+      animation: shakeInput 0.34s ease;
+    }
+
+    .error-hint {
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: var(--rose-600);
+      margin-top: 5px;
+    }
+
+    @keyframes shakeInput {
+      0%, 100% { transform: translateX(0); }
+      20% { transform: translateX(-6px); }
+      40% { transform: translateX(6px); }
+      60% { transform: translateX(-4px); }
+      80% { transform: translateX(4px); }
+    }
+
+    /* Section Header Bar */
+    .section-header-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 12px;
+      flex-wrap: wrap;
+    }
+
+    .section-title {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--slate-900);
+    }
+
+    .selected-tier-pill {
+      background: var(--blue-50);
+      border: 1px solid var(--blue-200);
+      color: var(--blue-800);
+      font-size: 0.78rem;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 999px;
+    }
+
+    .avail-count-text {
+      font-size: 0.84rem;
+      font-weight: 600;
+      color: var(--slate-500);
+    }
+
+    /* Row 2: 3-Column Tier Selection Grid */
+    .tier-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+
+    .tier-card {
+      background: #ffffff;
+      border: 2px solid var(--slate-200);
+      border-radius: 16px;
+      padding: 18px 18px 20px;
+      cursor: pointer;
+      text-align: left;
+      transition: all 0.18s ease;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+    }
+
+    .tier-card:hover {
+      border-color: var(--slate-300);
+      background: #fcfcfd;
+    }
+
+    .tier-card.selected {
+      border-color: var(--blue-700);
+      background: var(--blue-50);
+      box-shadow: 0 4px 14px rgba(29, 78, 216, 0.11);
+    }
+
+    .tier-card-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 12px;
+    }
+
+    .spec-chip {
+      font-size: 0.69rem;
+      font-weight: 800;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      padding: 4px 10px;
+      border-radius: 6px;
+    }
+
+    .chip-blue {
+      background: var(--sky-100);
+      color: var(--sky-700);
+    }
+
+    .chip-green {
+      background: var(--green-chip-bg);
+      color: var(--green-chip-fg);
+    }
+
+    .chip-purple {
+      background: var(--purple-100);
+      color: var(--purple-700);
+    }
+
+    .radio-circle {
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      border: 2px solid var(--slate-300);
+      background: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.16s ease;
+      flex-shrink: 0;
+    }
+
+    .radio-circle svg {
+      width: 13px;
+      height: 13px;
+      stroke: var(--slate-300);
+      stroke-width: 2.8;
+      fill: none;
+    }
+
+    .tier-card.selected .radio-circle {
+      background: var(--blue-700);
+      border-color: var(--blue-700);
+    }
+
+    .tier-card.selected .radio-circle svg {
+      stroke: #ffffff;
+    }
+
+    .tier-card-title {
+      font-size: 1.08rem;
+      font-weight: 800;
+      color: var(--slate-900);
+      margin-bottom: 8px;
+    }
+
+    .tier-card-desc {
+      font-size: 0.83rem;
+      color: var(--slate-600);
+      line-height: 1.52;
+    }
+
+    /* Row 3: 2-Column Quiz Focus Grid */
+    .focus-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+    }
+
+    .focus-card {
+      background: #ffffff;
+      border: 2px solid var(--slate-200);
+      border-radius: 16px;
+      padding: 16px 18px;
+      cursor: pointer;
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      text-align: left;
+      transition: all 0.18s ease;
+    }
+
+    .focus-card:hover {
+      border-color: var(--slate-300);
+      background: #fcfcfd;
+    }
+
+    .focus-card.selected {
+      border-color: var(--blue-700);
+      background: var(--blue-50);
+      box-shadow: 0 4px 14px rgba(29, 78, 216, 0.11);
+    }
+
+    .focus-icon-box {
+      width: 42px;
+      height: 42px;
+      border-radius: 11px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 2px;
+      transition: all 0.18s ease;
+    }
+
+    .focus-icon-blue {
+      background: var(--blue-700);
+      color: #ffffff;
+    }
+
+    .focus-icon-amber {
+      background: var(--amber-100);
+      color: var(--amber-700);
+    }
+
+    .focus-card.selected .focus-icon-amber {
+      background: var(--blue-700);
+      color: #ffffff;
+    }
+
+    .focus-content {
+      flex: 1;
+    }
+
+    .focus-title {
+      font-size: 0.98rem;
+      font-weight: 800;
+      color: var(--slate-900);
+      margin-bottom: 4px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .focus-check {
+      color: var(--blue-700);
+      font-weight: 800;
+      font-size: 0.95rem;
+    }
+
+    .focus-desc {
+      font-size: 0.82rem;
+      color: var(--slate-600);
+      line-height: 1.48;
+    }
+
+    /* Row 4: Number of Questions 5-Column Grid */
+    .count-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 12px;
+    }
+
+    .count-btn {
+      background: #ffffff;
+      border: 1.5px solid var(--slate-200);
+      border-radius: 12px;
+      padding: 13px 10px;
+      font-family: inherit;
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--slate-800);
+      cursor: pointer;
+      transition: all 0.16s ease;
+    }
+
+    .count-btn:hover:not(.active) {
+      border-color: var(--slate-300);
+      background: var(--slate-50);
+    }
+
+    .count-btn.active {
+      background: var(--blue-700);
+      border-color: var(--blue-700);
+      color: #ffffff;
+      box-shadow: 0 4px 12px rgba(29, 78, 216, 0.28);
+    }
+
+    .cap-notice {
+      margin-top: 9px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--amber-700);
+      background: var(--amber-50);
+      border: 1px solid #fde68a;
+      border-radius: 10px;
+      padding: 7px 12px;
+    }
+
+    /* Divider + Bottom Full-Width CTA */
+    .cta-divider {
+      border: none;
+      border-top: 1px solid var(--slate-200);
+      margin: 26px 0 22px;
+    }
+
+    .btn-start-cta {
+      width: 100%;
+      background: var(--blue-700);
+      color: #ffffff;
+      border: none;
+      border-radius: 12px;
+      padding: 16px 24px;
+      font-family: inherit;
+      font-size: 1.05rem;
+      font-weight: 700;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      box-shadow: var(--shadow-cta);
+      transition: background 0.18s ease, transform 0.15s ease;
+    }
+
+    .btn-start-cta:hover {
+      background: var(--blue-600);
+      transform: translateY(-1px);
+    }
+
+    /* ==========================================================================
+       SCREEN 2: ACTIVE QUIZ INTERFACE
+       ========================================================================== */
+    .quiz-hud {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 14px;
+    }
+
+    .hud-badges {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .hud-pill-brand {
+      background: var(--navy-950);
+      color: #ffffff;
+      font-size: 0.74rem;
+      font-weight: 800;
+      padding: 5px 12px;
+      border-radius: 999px;
+      letter-spacing: 0.02em;
+    }
+
+    .hud-pill-dark {
+      background: var(--blue-900);
+      color: #ffffff;
+      font-size: 0.76rem;
+      font-weight: 700;
+      padding: 5px 12px;
+      border-radius: 999px;
+    }
+
+    .hud-pill-blue {
+      background: var(--blue-50);
+      color: var(--blue-800);
+      border: 1px solid var(--blue-200);
+      font-size: 0.76rem;
+      font-weight: 700;
+      padding: 5px 12px;
+      border-radius: 999px;
+    }
+
+    .hud-pill-amber {
+      background: var(--amber-100);
+      color: var(--amber-700);
+      font-size: 0.76rem;
+      font-weight: 800;
+      padding: 5px 12px;
+      border-radius: 999px;
+    }
+
+    .hud-stats {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .hud-score-badge {
+      background: var(--emerald-50);
+      color: var(--emerald-700);
+      border: 1px solid #a7f3d0;
+      font-size: 0.8rem;
+      font-weight: 700;
+      padding: 4px 11px;
+      border-radius: 999px;
+    }
+
+    .hud-q-counter {
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: var(--slate-700);
+    }
+
+    .hud-change-btn {
+      background: #ffffff;
+      color: var(--slate-700);
+      border: 1.5px solid var(--slate-300);
+      border-radius: 999px;
+      padding: 4px 12px;
+      font-family: inherit;
+      font-size: 0.76rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+
+    .hud-change-btn:hover {
+      border-color: var(--blue-700);
+      color: var(--blue-700);
+      background: var(--blue-50);
+    }
+
+    .progress-track {
+      width: 100%;
+      height: 8px;
+      background: var(--slate-100);
+      border-radius: 999px;
+      overflow: hidden;
+      margin-bottom: 22px;
+    }
+
+    .progress-fill {
+      height: 100%;
+      width: 0%;
+      background: linear-gradient(90deg, var(--blue-800), var(--blue-500));
+      border-radius: 999px;
+      transition: width 0.3s ease;
+    }
+
+    .question-box {
+      background: var(--blue-50);
+      border: 1.5px solid var(--blue-200);
+      border-radius: 16px;
+      padding: 20px 22px;
+      margin-bottom: 18px;
+    }
+
+    .q-meta-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 8px;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .q-kicker {
+      font-size: 0.75rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--blue-800);
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .rp-badge {
+      background: var(--amber-100);
+      color: var(--amber-700);
+      border: 1px solid #fcd34d;
+      font-size: 0.68rem;
+      font-weight: 800;
+      padding: 2px 8px;
+      border-radius: 999px;
+      letter-spacing: 0.04em;
+    }
+
+    .kbd-tip {
+      font-size: 0.73rem;
+      color: var(--slate-500);
+      font-weight: 500;
+    }
+
+    .q-stem {
+      font-size: clamp(1.05rem, 2.1vw, 1.2rem);
+      font-weight: 700;
+      color: var(--slate-900);
+      line-height: 1.52;
+    }
+
+    .q-formula-box {
+      margin-top: 12px;
+      background: #ffffff;
+      border: 1px solid var(--blue-200);
+      border-left: 4px solid var(--blue-700);
+      border-radius: 10px;
+      padding: 10px 14px;
+      font-family: "Plus Jakarta Sans", "Inter", monospace;
+      font-size: 0.94rem;
+      font-weight: 700;
+      color: var(--blue-900);
+      line-height: 1.55;
+      overflow-x: auto;
+    }
+
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 6px;
+      font-family: "Inter", sans-serif;
+      font-size: 0.84rem;
+    }
+
+    .data-table th, .data-table td {
+      border: 1px solid var(--blue-200);
+      padding: 6px 10px;
+      text-align: center;
+    }
+
+    .data-table th {
+      background: var(--blue-50);
+      color: var(--blue-900);
+      font-weight: 700;
+    }
+
+    .data-table td {
+      background: #ffffff;
+      color: var(--slate-800);
+      font-weight: 600;
+    }
+
+    .options-list {
+      display: flex;
+      flex-direction: column;
+      gap: 11px;
+      margin-bottom: 18px;
+    }
+
+    .opt-btn {
+      width: 100%;
+      text-align: left;
+      background: #ffffff;
+      border: 2px solid var(--slate-200);
+      border-radius: 14px;
+      padding: 14px 16px;
+      font-family: inherit;
+      font-size: 0.96rem;
+      font-weight: 500;
+      color: var(--slate-800);
+      cursor: pointer;
+      display: flex;
+      align-items: flex-start;
+      gap: 13px;
+      transition: all 0.15s ease;
+    }
+
+    .opt-btn:hover:not(:disabled) {
+      border-color: var(--blue-600);
+      background: var(--blue-50);
+    }
+
+    .opt-btn:disabled {
+      cursor: default;
+    }
+
+    .opt-letter {
+      width: 28px;
+      height: 28px;
+      border-radius: 8px;
+      background: var(--slate-100);
+      color: var(--slate-700);
+      font-size: 0.82rem;
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    .opt-btn.correct {
+      border-color: var(--emerald-600);
+      background: var(--emerald-50);
+      color: var(--slate-900);
+    }
+
+    .opt-btn.correct .opt-letter {
+      background: var(--emerald-600);
+      color: #ffffff;
+    }
+
+    .opt-btn.incorrect {
+      border-color: var(--rose-600);
+      background: var(--rose-50);
+      color: var(--rose-700);
+    }
+
+    .opt-btn.incorrect .opt-letter {
+      background: var(--rose-600);
+      color: #ffffff;
+    }
+
+    .opt-btn.dimmed {
+      opacity: 0.55;
+    }
+
+    .feedback-panel {
+      border-radius: 14px;
+      padding: 16px 18px;
+      margin-bottom: 18px;
+      animation: fadeSlide 0.22s ease;
+    }
+
+    @keyframes fadeSlide {
+      from { opacity: 0; transform: translateY(6px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .feedback-panel.fb-pass {
+      background: var(--emerald-50);
+      border: 1px solid #a7f3d0;
+      border-left: 5px solid var(--emerald-600);
+    }
+
+    .feedback-panel.fb-fail {
+      background: var(--rose-50);
+      border: 1px solid var(--rose-200);
+      border-left: 5px solid var(--rose-600);
+    }
+
+    .fb-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 6px;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .fb-status {
+      font-weight: 800;
+      font-size: 0.98rem;
+    }
+
+    .fb-pass .fb-status { color: var(--emerald-700); }
+    .fb-fail .fb-status { color: var(--rose-600); }
+
+    .fb-chip {
+      font-size: 0.7rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      padding: 3px 9px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.9);
+      color: var(--slate-700);
+      border: 1px solid var(--slate-200);
+    }
+
+    .fb-text {
+      font-size: 0.91rem;
+      color: var(--slate-800);
+      line-height: 1.56;
+    }
+
+    .quiz-bottom-actions {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      padding-top: 14px;
+      border-top: 1px solid var(--slate-200);
+    }
+
+    .btn-secondary {
+      background: #ffffff;
+      color: var(--slate-700);
+      border: 1.5px solid var(--slate-300);
+      border-radius: 12px;
+      padding: 11px 18px;
+      font-family: inherit;
+      font-size: 0.9rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.16s ease;
+    }
+
+    .btn-secondary:hover {
+      background: var(--slate-50);
+      border-color: var(--slate-400);
+    }
+
+    .btn-primary-sm {
+      background: var(--blue-700);
+      color: #ffffff;
+      border: none;
+      border-radius: 12px;
+      padding: 12px 22px;
+      font-family: inherit;
+      font-size: 0.94rem;
+      font-weight: 700;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(29, 78, 216, 0.25);
+      transition: background 0.16s ease;
+    }
+
+    .btn-primary-sm:hover {
+      background: var(--blue-600);
+    }
+
+    /* ==========================================================================
+       SCREEN 3: DIAGNOSTIC RESULTS DASHBOARD
+       ========================================================================== */
+    .report-hero-box {
+      background: var(--blue-50);
+      border: 1.5px solid var(--blue-200);
+      border-radius: 16px;
+      padding: 24px 20px;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .report-student-line {
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--blue-800);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-bottom: 6px;
+    }
+
+    .report-score-row {
+      display: flex;
+      justify-content: center;
+      align-items: baseline;
+      gap: 10px;
+      margin-bottom: 8px;
+    }
+
+    .report-pct {
+      font-family: "Plus Jakarta Sans", sans-serif;
+      font-size: clamp(2.5rem, 5vw, 3.3rem);
+      font-weight: 800;
+      color: var(--blue-700);
+      line-height: 1;
+    }
+
+    .report-fraction {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--slate-600);
+    }
+
+    .grade-pill {
+      display: inline-block;
+      background: var(--blue-900);
+      color: #ffffff;
+      font-size: 0.85rem;
+      font-weight: 700;
+      padding: 5px 14px;
+      border-radius: 999px;
+      margin-bottom: 10px;
+    }
+
+    .report-summary-msg {
+      font-size: 0.93rem;
+      color: var(--slate-700);
+      max-width: 640px;
+      margin: 0 auto;
+    }
+
+    .report-btn-row {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 26px;
+    }
+
+    .mastery-section-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 12px;
+      padding-bottom: 8px;
+      border-bottom: 1.5px solid var(--slate-200);
+    }
+
+    .mastery-section-head h3 {
+      font-size: 1.05rem;
+      color: var(--slate-900);
+    }
+
+    .legend-row {
+      display: flex;
+      gap: 8px;
+      font-size: 0.74rem;
+      font-weight: 700;
+      flex-wrap: wrap;
+    }
+
+    .tag-g { background: var(--emerald-50); color: var(--emerald-700); padding: 3px 9px; border-radius: 999px; }
+    .tag-a { background: var(--amber-50); color: var(--amber-700); padding: 3px 9px; border-radius: 999px; }
+    .tag-r { background: var(--rose-50); color: var(--rose-600); padding: 3px 9px; border-radius: 999px; }
+
+    .mastery-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-bottom: 24px;
+    }
+
+    .mastery-item {
+      border: 1.5px solid var(--slate-200);
+      border-radius: 14px;
+      padding: 14px 16px;
+      background: #ffffff;
+    }
+
+    .mastery-item-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 8px;
+      flex-wrap: wrap;
+    }
+
+    .mastery-name {
+      font-weight: 700;
+      font-size: 0.94rem;
+      color: var(--slate-900);
+    }
+
+    .mastery-right {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .status-chip {
+      font-size: 0.7rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      padding: 3px 9px;
+      border-radius: 999px;
+    }
+
+    .sc-strong { background: var(--emerald-100); color: var(--emerald-700); }
+    .sc-dev { background: var(--amber-100); color: var(--amber-700); }
+    .sc-weak { background: var(--rose-100); color: var(--rose-600); }
+
+    .mastery-bar-track {
+      width: 100%;
+      height: 8px;
+      background: var(--slate-100);
+      border-radius: 999px;
+      overflow: hidden;
+      margin-bottom: 7px;
+    }
+
+    .mastery-bar-fill {
+      height: 100%;
+      border-radius: 999px;
+    }
+
+    .fill-g { background: var(--emerald-600); }
+    .fill-a { background: var(--amber-600); }
+    .fill-r { background: var(--rose-600); }
+
+    .mastery-tip {
+      font-size: 0.82rem;
+      color: var(--slate-600);
+      line-height: 1.5;
+    }
+
+    .review-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 12px;
+    }
+
+    .review-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .review-card {
+      border: 1.5px solid var(--slate-200);
+      border-left: 5px solid var(--slate-400);
+      border-radius: 12px;
+      padding: 14px 16px;
+    }
+
+    .review-card.rc-ok { border-left-color: var(--emerald-600); }
+    .review-card.rc-bad { border-left-color: var(--rose-600); }
+
+    .rc-kicker {
+      font-size: 0.74rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      color: var(--blue-800);
+      margin-bottom: 4px;
+    }
+
+    .rc-q {
+      font-weight: 700;
+      font-size: 0.95rem;
+      color: var(--slate-900);
+      margin-bottom: 6px;
+    }
+
+    .rc-ans {
+      font-size: 0.86rem;
+      margin-bottom: 3px;
+    }
+
+    .rc-exp {
+      margin-top: 8px;
+      padding-top: 8px;
+      border-top: 1px dashed var(--slate-200);
+      font-size: 0.84rem;
+      color: var(--slate-700);
+      line-height: 1.52;
+    }
+
+    .footer-note {
+      text-align: center;
+      font-size: 0.8rem;
+      color: var(--slate-400);
+      margin-top: 1.5rem;
+    }
+
+    /* ==========================================================================
+       RESPONSIVE BREAKPOINTS
+       ========================================================================== */
+    @media (max-width: 820px) {
+      .tier-grid {
+        grid-template-columns: 1fr;
+      }
+      .focus-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 640px) {
+      body {
+        padding: 0.75rem 0.65rem 2rem;
+      }
+      .banner-header {
+        padding: 24px 20px;
+      }
+      .card-body {
+        padding: 20px 18px 26px;
+      }
+      .input-grid {
+        grid-template-columns: 1fr;
+        gap: 14px;
+      }
+      .count-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+      .kbd-tip {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="app-container">
+    <!-- ======================================================================
+         ROYAL / SAPPHIRE BLUE HEADER BANNER
+         ====================================================================== -->
+    <header class="banner-header">
+      <div class="banner-top-row">
+        <span class="spec-pill">TOPIC 2 &bull; PAPER 1 REVISION (8463 &amp; 8464)</span>
+        <span class="brand-tag">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#bfdbfe" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+          </svg>
+          Mr Leek Science
+        </span>
+      </div>
+      <h1 id="banner-main-title" class="banner-title">Configure Your Electricity Quiz</h1>
+      <p id="banner-main-sub" class="banner-subtitle">Enter your name, choose your tier, select either all Topic 2 content or Required Practicals &amp; Calculations only, and pick your question count.</p>
+    </header>
+
+    <!-- ======================================================================
+         VIEW 1: CONFIGURATION SCREEN
+         ====================================================================== -->
+    <main id="view-config" class="card-body">
+      <!-- Row 1: Student Name & Email Address -->
+      <div class="section-block input-grid">
+        <div class="field-group">
+          <label for="student-name" class="field-label">Student Name <span class="req-star">*</span></label>
+          <input type="text" id="student-name" class="text-input" placeholder="Enter your full name" autocomplete="name" />
+          <span id="name-error-msg" class="error-hint hidden">Please enter your name before starting the quiz.</span>
+        </div>
+
+        <div class="field-group">
+          <label for="student-email" class="field-label">Email Address <span class="opt-muted">(Optional)</span></label>
+          <input type="email" id="student-email" class="text-input" placeholder="e.g. student@school.co.uk" autocomplete="email" />
+        </div>
+      </div>
+
+      <!-- Row 2: Select Tier / Pathway -->
+      <div class="section-block">
+        <div class="section-header-bar">
+          <span class="section-title">Select Tier / Pathway</span>
+          <span id="selected-tier-badge" class="selected-tier-pill">Higher Tier Selected</span>
+        </div>
+
+        <div class="tier-grid" role="radiogroup" aria-label="Select Tier or Pathway">
+          <!-- Foundation Tier -->
+          <div class="tier-card" id="tier-card-foundation" role="radio" aria-checked="false" tabindex="0" onclick="selectTier('foundation')" onkeydown="if(event.key==='Enter'||event.key===' ')selectTier('foundation')">
+            <div class="tier-card-top">
+              <span class="spec-chip chip-blue">COMBINED 8464</span>
+              <span class="radio-circle" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              </span>
+            </div>
+            <div class="tier-card-title">Foundation Tier</div>
+            <p class="tier-card-desc">Core circuit symbols, charge Q=It, Ohm's law V=IR, series &amp; parallel basics, UK mains plug safety, P=IV &amp; E=Pt, and National Grid transformers (Grades 1–5).</p>
+          </div>
+
+          <!-- Higher Tier (Default Selected) -->
+          <div class="tier-card selected" id="tier-card-higher" role="radio" aria-checked="true" tabindex="0" onclick="selectTier('higher')" onkeydown="if(event.key==='Enter'||event.key===' ')selectTier('higher')">
+            <div class="tier-card-top">
+              <span class="spec-chip chip-green">COMBINED 8464</span>
+              <span class="radio-circle" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              </span>
+            </div>
+            <div class="tier-card-title">Higher Tier</div>
+            <p class="tier-card-desc">Includes multi-step circuit rearrangements, I-V graph resistance explanations, thermistor &amp; LDR sensing circuits, P=I&sup2;R &amp; E=QV calculations, and transformer turns/efficiency principles (Grades 4–9).</p>
+          </div>
+
+          <!-- Separate Physics -->
+          <div class="tier-card" id="tier-card-separate" role="radio" aria-checked="false" tabindex="0" onclick="selectTier('separate')" onkeydown="if(event.key==='Enter'||event.key===' ')selectTier('separate')">
+            <div class="tier-card-top">
+              <span class="spec-chip chip-purple">TRIPLE 8463</span>
+              <span class="radio-circle" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              </span>
+            </div>
+            <div class="tier-card-title">Separate Physics</div>
+            <p class="tier-card-desc">Full 8463 content: Static electricity, friction &amp; electron transfer, sparking/earthing, and electric field patterns around point charges &amp; parallel plates (Grades 1–9).</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Row 3: Quiz Focus -->
+      <div class="section-block">
+        <div class="section-header-bar">
+          <span class="section-title">Quiz Focus</span>
+        </div>
+
+        <div class="focus-grid" role="radiogroup" aria-label="Quiz Focus">
+          <!-- Option 1: All Topics -->
+          <div class="focus-card selected" id="focus-card-all" role="radio" aria-checked="true" tabindex="0" onclick="selectFocus('all')" onkeydown="if(event.key==='Enter'||event.key===' ')selectFocus('all')">
+            <div class="focus-icon-box focus-icon-blue" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+              </svg>
+            </div>
+            <div class="focus-content">
+              <div class="focus-title">
+                <span>All Electricity Topics</span>
+                <span id="focus-check-all" class="focus-check">&#10003;</span>
+              </div>
+              <p class="focus-desc">Covers circuits, I-V characteristics, mains electricity, power, National Grid &amp; static electricity.</p>
+            </div>
+          </div>
+
+          <!-- Option 2: Required Practicals & Calculations Only -->
+          <div class="focus-card" id="focus-card-practicals" role="radio" aria-checked="false" tabindex="0" onclick="selectFocus('practicals')" onkeydown="if(event.key==='Enter'||event.key===' ')selectFocus('practicals')">
+            <div class="focus-icon-box focus-icon-amber" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M9 3h6"></path>
+                <path d="M10 3v5.5L4.5 18A2 2 0 0 0 6.2 21h11.6a2 2 0 0 0 1.7-3L14 8.5V3"></path>
+                <path d="M7 15h10"></path>
+              </svg>
+            </div>
+            <div class="focus-content">
+              <div class="focus-title">
+                <span>Required Practicals &amp; Calculations Only</span>
+                <span id="focus-check-practicals" class="focus-check hidden">&#10003;</span>
+              </div>
+              <p class="focus-desc">Focused drill: RP3/RP15 Resistance of a Wire &amp; Series/Parallel Resistors, RP4/RP16 I-V Characteristics of Resistor, Filament Lamp &amp; Diode, plus circuit maths.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Row 4: Number of Questions -->
+      <div class="section-block" style="margin-bottom: 0;">
+        <div class="section-header-bar">
+          <span class="section-title">Number of Questions</span>
+          <span id="available-q-label" class="avail-count-text">62 unique questions available for Higher Tier</span>
+        </div>
+
+        <div class="count-grid" role="radiogroup" aria-label="Number of Questions">
+          <button type="button" class="count-btn" data-count="10" onclick="selectCount(10)">10</button>
+          <button type="button" class="count-btn active" data-count="20" onclick="selectCount(20)">20</button>
+          <button type="button" class="count-btn" data-count="30" onclick="selectCount(30)">30</button>
+          <button type="button" class="count-btn" data-count="50" onclick="selectCount(50)">50</button>
+          <button type="button" class="count-btn" data-count="80" onclick="selectCount(80)">80</button>
+        </div>
+
+        <div id="cap-feedback-banner" class="cap-notice hidden"></div>
+      </div>
+
+      <hr class="cta-divider" />
+
+      <button type="button" id="btn-start-quiz" class="btn-start-cta" onclick="launchConfiguredQuiz()">
+        Start Higher Tier Quiz (20 Questions) &rarr;
+      </button>
+    </main>
+
+    <!-- ======================================================================
+         VIEW 2: ACTIVE QUIZ RUNNER
+         ====================================================================== -->
+    <section id="view-quiz" class="card-body hidden" aria-live="polite">
+      <div class="quiz-hud">
+        <div class="hud-badges">
+          <span class="hud-pill-brand">Mr Leek Science</span>
+          <span id="hud-student-pill" class="hud-pill-dark">Student</span>
+          <span id="hud-tier-pill" class="hud-pill-blue">Higher Tier</span>
+          <span id="hud-focus-pill" class="hud-pill-blue">All Electricity Topics</span>
+          <span id="hud-retry-pill" class="hud-pill-amber hidden">Retry Missed Mode</span>
+        </div>
+
+        <div class="hud-stats">
+          <span id="hud-live-score" class="hud-score-badge">Score: 0 / 0</span>
+          <span id="hud-counter" class="hud-q-counter">Question 1 of 20</span>
+          <button type="button" class="hud-change-btn" onclick="returnToConfig()">Change Settings</button>
+        </div>
+      </div>
+
+      <div class="progress-track">
+        <div id="quiz-progress-fill" class="progress-fill"></div>
+      </div>
+
+      <div class="question-box">
+        <div class="q-meta-row">
+          <span id="q-kicker-label" class="q-kicker">Question 1 &bull; Sub-topic</span>
+          <span class="kbd-tip">Shortcuts: 1–4 or A–D to answer &bull; Enter for Next</span>
+        </div>
+        <div id="q-stem-text" class="q-stem">Question stem</div>
+        <div id="q-formula-box" class="q-formula-box hidden"></div>
+      </div>
+
+      <div id="quiz-options-list" class="options-list"></div>
+
+      <div id="quiz-feedback-panel" class="feedback-panel hidden">
+        <div class="fb-top">
+          <span id="fb-status-text" class="fb-status"></span>
+          <span class="fb-chip">AQA Examiner Insight</span>
+        </div>
+        <div id="fb-insight-text" class="fb-text"></div>
+      </div>
+
+      <div class="quiz-bottom-actions">
+        <button type="button" class="btn-secondary" onclick="returnToConfig()">&larr; Change Settings</button>
+        <button type="button" id="btn-next-question" class="btn-primary-sm hidden" onclick="advanceQuestion()">Next Question &rarr;</button>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         VIEW 3: DIAGNOSTIC RESULTS DASHBOARD
+         ====================================================================== -->
+    <section id="view-report" class="card-body hidden">
+      <div class="report-hero-box">
+        <div id="rep-student-header" class="report-student-line">Diagnostic Report &bull; Student</div>
+        <div class="report-score-row">
+          <span id="rep-pct-val" class="report-pct">85%</span>
+          <span id="rep-frac-val" class="report-fraction">(17 / 20)</span>
+        </div>
+        <div id="rep-grade-pill" class="grade-pill">Estimated AQA Indicator: Grade 8–9</div>
+        <p id="rep-msg-text" class="report-summary-msg"></p>
+      </div>
+
+      <div class="report-btn-row">
+        <button type="button" id="btn-retry-missed" class="btn-primary-sm" onclick="startRetryMissed()">Retry Missed Questions (3)</button>
+        <button type="button" class="btn-secondary" onclick="launchConfiguredQuiz()">Retake Full Quiz</button>
+        <button type="button" class="btn-secondary" onclick="returnToConfig()">Back to Configuration</button>
+      </div>
+
+      <div class="mastery-section-head">
+        <h3>Sub-Topic Mastery Breakdown</h3>
+        <div class="legend-row">
+          <span class="tag-g">Strong Area (&ge;80%)</span>
+          <span class="tag-a">Developing (50–79%)</span>
+          <span class="tag-r">Priority Revision (&lt;50%)</span>
+        </div>
+      </div>
+
+      <div id="rep-mastery-grid" class="mastery-grid"></div>
+
+      <div class="review-header">
+        <h3 style="font-size: 1.05rem; color: var(--slate-900);">Full Question-by-Question Review</h3>
+        <button type="button" id="btn-toggle-review" class="btn-secondary" onclick="toggleReviewSection()">Show Full Question-by-Question Review</button>
+      </div>
+
+      <div id="rep-review-list" class="review-list hidden"></div>
+    </section>
+  </div>
+
+  <p class="footer-note">&copy; Mr Leek Science &bull; AQA GCSE Physics (8463 &amp; 8464) Topic 2 Electricity Interactive Assessment</p>
+
+  <script>
+    /* ==========================================================================
+       AQA GCSE PHYSICS TOPIC 2 QUESTION BANK (74 UNIQUE QUESTIONS)
+       Subtopics:
+       1. Standard Circuit Symbols, Charge & Current (14 Qs)
+       2. Resistance, Ohm's Law & Required Practicals 3 & 4 (20 Qs)
+       3. Series & Parallel Circuits (12 Qs)
+       4. Domestic Uses, Mains Electricity, Power & The National Grid (16 Qs)
+       5. Static Electricity & Electric Fields (12 Qs) [Separate Physics 8463 Only]
+       ========================================================================== */
+    const SUBTOPIC_GUIDANCE = {
+      "Standard Circuit Symbols, Charge & Current": "Master all 14 AQA circuit symbols (especially diode vs. LED, thermistor vs. LDR, and fuse vs. resistor). Remember Q = I &times; t (charge in coulombs C, current in amperes A, time in seconds s). Current in a single closed loop has the same value at any point, ammeters are always connected in SERIES, and voltmeters are always connected in PARALLEL across a component.",
+      "Resistance, Ohm's Law & Required Practicals 3 & 4": "Use V = I &times; R. For RP3/RP15 (Resistance of a wire): resistance is directly proportional to length at constant temperature—switch off between readings to prevent the wire heating up (which increases resistance) and correct for zero error. For RP4/RP16 (I–V graphs): an ohmic conductor gives a straight line through the origin (constant resistance); a filament lamp curves flatter at high p.d. because heating increases ion vibrations and electron collisions; a diode conducts in one direction only above ~0.6 V. Remember: in bright light, LDR resistance drops; in warm conditions, thermistor resistance drops.",
+      "Series & Parallel Circuits": "Contrast the two circuit rules cleanly: In SERIES, current is the same everywhere (I<sub>1</sub> = I<sub>2</sub>), total p.d. is shared (V<sub>total</sub> = V<sub>1</sub> + V<sub>2</sub>), and total resistance adds up (R<sub>total</sub> = R<sub>1</sub> + R<sub>2</sub>). In PARALLEL, p.d. across each branch is identical (V<sub>1</sub> = V<sub>2</sub> = V<sub>supply</sub>), total current splits across branches (I<sub>total</sub> = I<sub>1</sub> + I<sub>2</sub>), and total resistance is ALWAYS LESS than the resistance of the smallest individual branch resistor!",
+      "Domestic Uses, Mains Electricity, Power & The National Grid": "UK mains electricity is AC at 230 V and 50 Hz. Know the 3-core plug wires: Live (brown, 230 V, carries alternating potential), Neutral (blue, 0 V, completes the circuit), and Earth (green &amp; yellow stripes, 0 V safety wire connected to metal casing). Switches and fuses must always be wired into the LIVE wire. Master P = I &times; V, P = I<sup>2</sup> &times; R, E = P &times; t, and E = Q &times; V. On the National Grid, step-up transformers increase p.d. (~400,000 V) to reduce current, dramatically cutting P = I<sup>2</sup>R thermal energy losses in transmission cables.",
+      "Static Electricity & Electric Fields": "For Triple 8463: when two insulating materials are rubbed together, negatively charged ELECTRONS are transferred from one material to the other (protons are fixed in the nucleus and NEVER move!). Like charges repel; opposite charges attract. Earthing provides a safe conducting path for electrons to prevent sparks near fuel tankers. Electric field lines always point away from positive charges and towards negative charges (radial around a charged sphere; uniform parallel arrows between oppositely charged plates)."
+    };
+
+    const QUESTION_POOL = [
+      // ========================================================================
+      // 1. STANDARD CIRCUIT SYMBOLS, CHARGE & CURRENT (14 Questions)
+      // ========================================================================
+      {
+        id: "P2_Q01",
+        tiers: ["foundation", "higher", "separate"],
+        isPractical: false,
+        subtopic: "Standard Circuit Symbols, Charge & Current",
+        stem: "How is the circuit symbol for a THERMISTOR drawn in AQA GCSE Physics?",
+        formulaBox: "Standard AQA circuit symbols",
+        options: [
+          "A rectangle (resistor) with a diagonal line passing through it that has a horizontal flat tick at the bottom-left end (hockey-stick line)",
+          "A rectangle inside a circle with two arrows pointing towards it",
+          "A triangle pointing against a vertical bar inside a circle with two arrows pointing away",
+          "A rectangle with a single diagonal arrow pointing across it"
+        ],
+        correct: 0,
+        explanation: "A thermistor is drawn as a resistor rectangle with a diagonal line featuring a flat horizontal end (resembling a hockey stick). A rectangle with a diagonal arrow is a variable resistor."
+      },
+      {
+        id: "P2_Q02",
+        tiers: ["foundation", "higher", "separate"],
+        isPractical: false,
+        subtopic: "Standard Circuit Symbols, Charge & Current",
+        stem: "Which circuit symbol consists of a resistor rectangle inside a circle with two parallel arrows pointing TOWARDS the rectangle?",
+        formulaBox: "Light-sensitive semiconductor component",
+        options: [
+          "Light-dependent resistor (LDR)",
+          "Light-emitting diode (LED)",
+          "Filament lamp",
+          "Thermistor"
+        ],
+        correct: 0,
+        explanation: "Arrows pointing INWARDS represent light shining onto a Light-Dependent Resistor (LDR). Arrows pointing OUTWARDS from a diode represent light emitted by an LED."
+      },
+      {
+        id: "P2_Q03",
+        tiers: ["foundation", "higher", "separate"],
+        isPractical: false,
+        subtopic: "Standard Circuit Symbols, Charge & Current",
+        stem: "How do you distinguish the circuit symbol for a FUSE from a fixed RESISTOR?",
+        formulaBox: "Safety component vs. fixed resistance",
+        options: [
+          "A fuse is a rectangle with the connecting wire line continuing straight through the middle of the rectangle; a fixed resistor is an empty rectangle with wires stopping at each end",
+          "A fuse is a circle with a cross inside; a resistor is a triangle",
+          "A fuse has two parallel vertical lines; a resistor has a zigzag line",
+          "A fuse has two arrows pointing outwards"
+        ],
+        correct: 0,
+        explanation: "In AQA standard symbols, the fuse wire runs continuously right through the centre of the rectangular box."
+      },
+      {
+        id: "P2_Q04",
+        tiers: ["foundation", "higher", "separate"],
+        isPractical: false,
+        subtopic: "Standard Circuit Symbols, Charge & Current",
+        stem: "What is ELECTRIC CURRENT, and what drives a current around a closed electrical circuit?",
+        formulaBox: "Charge flow &amp; Potential difference",
+        options: [
+          "Electric current is the rate of flow of electrical charge; a source of potential difference (such as a cell or battery) and a closed conducting loop are needed for charge to flow",
+          "Electric current is the push of a battery measured in volts",
+          "Electric current is the resistance of a wire measured in ohms",
+          "Electric current flows even when a switch is open"
+        ],
+        correct: 0,
+        explanation: "AQA specification exact wording: For electrical charge to flow through a closed circuit the circuit must include a source of potential difference. Electric current is a flow of electrical charge. The size of the electric current is the rate of flow of electrical charge."
+      },
+      {
+        id: "P2_Q05",
+        tiers: ["foundation", "higher", "separate"],
+        isPractical: true,
+        subtopic: "Standard Circuit Symbols, Charge & Current",
+        stem: "A steady current of 2.5 A flows through a lamp for 4.0 minutes. Calculate the total electrical charge that flows through the lamp.",
+        formulaBox: "Q = I t  |  1 minute = 60 seconds",
+        options: [
+          "600 C",
+          "10 C",
+          "0.625 C",
+          "96 C"
+        ],
+        correct: 0,
+        explanation: "Convert time into seconds first: t = 4.0 &times; 60 = 240 s. Charge Q = I &times; t = 2.5 &times; 240 = 600 C (coulombs)."
+      },
+      {
+        id: "P2_Q06",
+        tiers: ["foundation", "higher", "separate"],
+        isPractical: true,
+        subtopic: "Standard Circuit Symbols, Charge & Current",
+        stem: "A lightning bolt transfers 15 C of charge to the ground in 0.0050 s (5.0 ms). Calculate the average electric current during the lightning strike.",
+        formulaBox: "I = Q / t",
+        options: [
+          "3000 A",
+          "0.075 A",
+          "300 A",
+          "0.00033 A"
+        ],
+        correct: 0,
+        explanation: "I = Q &divide; t = 15 &divide; 0.0050 = 3000 A."
+      },
+      {
+        id: "P2_Q07",
+        tiers: ["higher", "separate"],
+        isPractical: true,
+        subtopic: "Standard Circuit Symbols, Charge & Current",
+        stem: "A smartphone battery supplies a constant current of 400 mA until 720 C of charge has flowed. How long, in minutes, did this take?",
+        formulaBox: "t = Q / I  |  1 A = 1000 mA",
+        options: [
+          "30 minutes",
+          "1.8 minutes",
+          "1800 minutes",
+          "0.030 minutes"
+        ],
+        correct: 0,
+        explanation: "Convert 400 mA &divide; 1000 = 0.40 A. Time in seconds: t = 720 &divide; 0.40 = 1800 s. Convert to minutes: 1800 &divide; 60 = 30 minutes."
+      },
+      {
+        id: "P2_Q08",
+        tiers: ["foundation", "higher", "separate"],
+        isPractical: false,
+        subtopic: "Standard Circuit Symbols, Charge & Current",
+        stem: "What is the rule for electric current in a SINGLE CLOSED LOOP (series circuit)?",
+        formulaBox: "Conservation of charge in a single loop",
+        options: [
+          "The current has the same value at any point in a single closed loop",
+          "Current gets used up as it passes through each bulb",
+          "Current is largest right next to the positive terminal and zero near the negative terminal",
+          "Current doubles every time it passes through a resistor"
+        ],
+        correct: 0,
+        explanation: "AQA specification exact wording: A current has the same value at any point in a single closed loop."
+      },
+      {
+        id: "P2_Q09",
+        tiers: ["foundation", "higher", "separate"],
+        isPractical: true,
+        subtopic: "Standard Circuit Symbols, Charge & Current",
+        stem: "How must an AMMETER and a VOLTMETER be connected to measure the current through, and potential difference across, a filament lamp?",
+        formulaBox: "Proper meter connections",
+        options: [
+          "Ammeter connected in SERIES with the lamp; Voltmeter connected in PARALLEL across the lamp",
+          "Ammeter connected in PARALLEL across the lamp; Voltmeter connected in SERIES with the lamp",
+          "Both ammeter and voltmeter connected in series",
+          "Both ammeter and voltmeter connected in parallel"
+        ],
+        correct: 0,
+        explanation: "An ideal ammeter has very low resistance and goes in series so all current flows through it; an ideal voltmeter has very high resistance and goes in parallel across the component."
+      },
+      {
+        id: "P2_Q10",
+        tiers: ["foundation", "higher", "separate"],
+        isPractical: false,
+        subtopic: "Standard Circuit Symbols, Charge & Current",
+        stem: "In a metal wire, which particles move to carry the electric current, and how does their direction compare with CONVENTIONAL CURRENT?",
+        formulaBox: "Delocalised electrons vs. Conventional current",
+        options: [
+          "Negatively charged delocalised electrons flow from the negative terminal to the positive terminal, which is OPPOSITE to the direction of conventional current (positive to negative)",
+          "Positively charged protons flow from positive to negative in the same direction as conventional current",
+          "Neutrons flow from negative to positive",
+          "Electrons flow from positive to negative"
+        ],
+        correct: 0,
+        explanation: "In metallic conductors, free/delocalised electrons carry negative charge towards the positive terminal, opposite to historical conventional current (+ to &minus;)."
+      },
+      {
+        id: "P2_Q11",
+        tiers: ["foundation", "higher", "separate"],
+        isPractical: false,
+        subtopic: "Standard Circuit Symbols, Charge & Current",
+        stem: "What is the difference between the circuit symbol for a single CELL and a BATTERY?",
+        formulaBox: "Power supply symbols",
+        options: [
+          "A cell has one long vertical line (positive) and one shorter, thicker vertical line (negative); a battery consists of two or more cells joined together (often shown with a dashed line between end cells)",
+          "A cell is a circle with a V inside; a battery is a circle with an A inside",
+          "A cell has a wavy line inside a circle; a battery has a straight line",
+          "A cell is a rectangle; a battery is a triangle"
+        ],
+        correct: 0,
+        explanation: "The longer thin line represents the positive terminal (+) and the shorter thick line represents the negative terminal (&minus;)."
+      },
+      {
+        id: "P2_Q12",
+        tiers: ["foundation", "higher", "separate"],
+        isPractical: false,
+        subtopic: "Standard Circuit Symbols, Charge & Current",
+        stem: "What is the SI unit of ELECTRICAL CHARGE (Q)?",
+        formulaBox: "Q = I t",
+        options: [
+          "Coulomb (C)",
+          "Ampere (A)",
+          "Volt (V)",
+          "Ohm (&Omega;)"
+        ],
+        correct: 0,
+        explanation: "Charge Q is measured in coulombs (C). 1 coulomb is the charge passing a point when a current of 1 ampere flows for 1 second."
+      },
+      {
+        id: "P2_Q13",
+        tiers: ["higher", "separate"],
+        isPractical: true,
+        subtopic: "Standard Circuit Symbols, Charge & Current",
+        stem: "Why must a VOLTMETER have a very high internal resistance and an AMMETER have a very low internal resistance?",
+        formulaBox: "Minimising circuit disturbance by meters",
+        options: [
+          "So the voltmeter draws negligible current from the component it is placed across, and the ammeter causes negligible potential difference drop in the series loop",
+          "So the voltmeter heats up the wire and the ammeter stops all current",
+          "So both meters act as fuses if current gets too high",
+          "So the voltmeter measures resistance directly in ohms"
+        ],
+        correct: 0,
+        explanation: "High voltmeter resistance prevents current bypassing the component; low ammeter resistance prevents reducing the circuit current."
+      },
+      {
+        id: "P2_Q14",
+        tiers: ["foundation", "higher", "separate"],
+        isPractical: false,
+        subtopic: "Standard Circuit Symbols, Charge & Current",
+        stem: "Three 1.5 V cells are connected in series with all positive terminals facing the same direction. What is the total potential difference of the battery?",
+        formulaBox: "Cells connected in series",
+        options: [
+          "4.5 V",
+          "1.5 V",
+          "0.5 V",
+          "3.0 V"
+        ],
+        correct: 0,
+        explanation: "Connecting identical cells in series adds their potential differences together: 1.5 V + 1.5 V + 1.5 V = 4.5 V."
+      },
+
+      // ========================================================================
+      // 2. RESISTANCE, OHM'S LAW & REQUIRED PRACTICALS 3 & 4 (20 Questions)
+      // ========================================================================
+      {
+        id: "P2_Q15",
+        tiers: ["foundation", "higher", "separate"],
+        isPractical: true,
+        subtopic: "Resistance, Ohm's Law & Required Practicals 3 & 4",
+        stem: "A potential difference of 12 V is applied across a fixed resistor of resistance 48 &Omega;. Calculate the current flowing through the resistor.",
+        formulaBox: "V = I R  &rArr;  I = V / R",
+        options: [
+          "0.25 A",
+          "4.0 A",
+          "576 A",
+          "36 A"
+        ],
+        correct: 0,
+        explanation: "I = V &divide; R = 12 &divide; 48 = 0.25 A. (Common trap: dividing 48 by 12 gives 4.0 A—always check V is on top!)"
+      },
+      {
+        id: "P2_Q16",
+        tiers: ["foundation", "higher", "separate"],
+        isPractical: true,
+        subtopic: "Resistance, Ohm's Law & Required Practicals 3 & 4",
+        stem: "A current of 0.35 A flows through a heating element when connected to a 230 V supply. Calculate the resistance of the heating element to 2 significant figures.",
+        formulaBox: "R = V / I",
+        options: [
+          "660 &Omega; (657 &Omega;)",
+          "81 &Omega;",
+          "0.0015 &Omega;",
+          "230 &Omega;"
+        ],
+        correct: 0,
+        explanation: "R = V &divide; I = 230 &divide; 0.35 = 657.14... &Omega; &approx; 660 &Omega; (2 s.f.)."
+      },
+      {
+        id: "P2_Q17",
+        tiers: ["higher", "separate"],
+        isPractical: true,
+        subtopic: "Resistance, Ohm's Law & Required Practicals 3 & 4",
+        stem: "A current of 40 mA flows through a 1.5 k&Omega; resistor. Calculate the potential difference across the resistor.",
+        formulaBox: "V = I R  |  1 A = 1000 mA  |  1 k&Omega; = 1000 &Omega;",
+        options: [
+          "60 V",
+          "60,000 V",
+          "0.060 V",
+          "37.5 V"
+        ],
+        correct: 0,
+        explanation: "Convert units: I = 40 mA = 0.040 A; R = 1.5 k&Omega; = 1500 &Omega;. V = 0.040 &times; 1500 = 60 V."
+      },
+      {
+        id: "P2_Q18",
+        tiers: ["foundation", "higher", "separate"],
+        isPractical: true,
+        subtopic: "Resistance, Ohm's Law & Required Practicals 3 & 4",
+        stem: "In Required Practical 3 (RP3 / RP15: Investigating how the length of a wire affects its resistance), what is the relationship between the length of a uniform wire and its resistance (at constant temperature)?",
+        formulaBox: "Required Practical 3 — Length vs. Resistance",
+        options: [
+          "Resistance is DIRECTLY PROPORTIONAL to the length of the wire (graph is a straight line passing through the origin)",
+          "Resistance is inversely proportional to length",
+          "Resistance stays constant regardless of wire length",
+          "Doubling the length halves the resistance"
+        ],
+        correct: 0,
+        explanation: "AQA Required Practical 3 key finding: At constant temperature, the resistance of a wire is directly proportional to its length (doubling length doubles resistance)."
+      },
+      {
+        id: "P2_Q19",
+        tiers: ["foundation", "higher", "separate"],
+        isPractical: true,
+        subtopic: "Resistance, Ohm's Law & Required Practicals 3 & 4",
+        stem: "In Required Practical 3 (Resistance of a Wire), why should the student OPEN THE SWITCH (disconnect the power supply) between taking readings for different wire lengths?",
+        formulaBox: "Controlling temperature in RP3",
+        options: [
+          "To prevent the wire from heating up—if the wire gets hot, its resistance increases, making the graph curve upwards instead of remaining a straight line",
+          "To stop the crocodile clips from melting onto the wooden metre rule",
+          "To recharge the laboratory power pack",
+          "Because voltmeters only work when the switch is open"
+        ],
+        correct: 0,
+        explanation: "Temperature is a key control variable in RP3: keeping current low and switching off between readings keeps temperature constant."
+      },
+      {
+        id: "P2_Q20",
+        tiers: ["higher", "separate"],
+        isPractical: true,
+        subtopic: "Resistance, Ohm's Law & Required Practicals 3 & 4",
+        stem: "In Required Practical 3, a student's graph of Resistance (&Omega;) against Length (cm) is a straight line, but it crosses the y-axis at +0.4 &Omega; instead of passing through (0, 0). What caused this ZERO ERROR and how should it be corrected?",
+        formulaBox: "Systematic zero error in resistance measurements",
+        options: [
+          "The connecting leads and crocodile clips themselves have 0.4 &Omega; of resistance; subtract 0.4 &Omega; from every measured resistance value",
+          "The ammeter was connected in parallel; multiply every reading by 0.4",
+          "The wire got colder during the test; add 0.4 &Omega; to every reading",
+          "The power supply voltage was too high; ignore the first reading"
+        ],
+        correct: 0,
+        explanation: "Resistance in connecting leads/crocodile clips shifts the entire line upwards by a constant offset (zero error), which is removed by subtracting the y-intercept."
+      },
+      {
+        id: "P2_Q21",
+        tiers: ["foundation", "higher", "separate"],
+        isPractical: true,
+        subtopic: "Resistance, Ohm's Law & Required Practicals 3 & 4",
+        stem: "In Required Practical 4 (RP4 / RP16: I–V Characteristics), what shape is the Current–Potential Difference (I–V) graph for an OHMIC CONDUCTOR (such as a fixed resistor at constant temperature)?",
+        formulaBox: "Required Practical 4 — Ohmic Conductor",
+        options: [
+          "A straight line passing directly through the origin (0, 0), showing that current is directly proportional to potential difference and resistance is constant",
+          "An S-shaped curve that flattens out at high voltages",
+          "A flat horizontal line along the x-axis for negative voltages and a steep curve upwards above +0.6 V",
+          "A curve bending downwards to zero"
+        ],
+        correct: 0,
+        explanation: "AQA specification: The current through an ohmic conductor (at a constant temperature) is directly proportional to the potential difference across the resistor. This means that the resistance remains constant as the current changes."
+      },
+      {
+        id: "P2_Q22",
+        tiers: ["higher", "separate"],
+        isPractical: true,
+        subtopic: "Resistance, Ohm's Law & Required Practicals 3 & 4",
+        stem: "Explain, in terms of particles, why the resistance of a FILAMENT LAMP increases as the potential difference across it increases (causing its I–V graph to curve and become less steep).",
+        formulaBox: "Required Practical 4 — Filament Lamp Physics",
+        options: [
+          "As p.d. and current increase, the filament's temperature increases; the metal ions vibrate faster with greater amplitude, causing more frequent collisions with flowing electrons and making it harder for current to flow",
+          "As the filament heats up, the metal ions stop vibrating completely",
+          "Higher potential difference destroys electrons inside the tungsten wire",
+          "The resistance of a filament lamp actually decreases as it gets hotter"
+        ],
+        correct: 0,
+        explanation: "Classic 3-mark AQA Higher explanation: Increased current &rarr; higher temperature &rarr; metal ions vibrate more &rarr; more frequent collisions with delocalised electrons &rarr; higher resistance."
+      },
+      {
+        id: "P2_Q23",
+        tiers: ["foundation", "higher", "separate"],
+        isPractical: true,
+        subtopic: "Resistance, Ohm's Law & Required Practicals 3 & 4",
+        stem: "Describe the Current–Potential Difference (I–V) characteristic of a semiconductor DIODE.",
+        formulaBox: "Required Practical 4 — Diode",
+        options: [
+          "Current flows in ONE direction only: in the reverse direction resistance is very high (practically zero current); in the forward direction resistance is very low above a small threshold p.d. (~0.6 V) so current rises sharply",
+          "Current is directly proportional to potential difference in both forward and reverse directions",
+          "A diode has zero resistance in both directions",
+          "Current decreases as forward potential difference increases"
+        ],
+        correct: 0,
+        explanation: "AQA specification: The current through a diode flows in one direction only. The diode has a very high resistance in the reverse direction."
+      },
+      {
+        id: "P2_Q24",
+        tiers: ["foundation", "higher", "separate"],
+        isPractical: true,
+        subtopic: "Resistance, Ohm's Law & Required Practicals 3 & 4",
+        stem: "In Required Practical 4 (investigating I–V characteristics of a resistor, filament lamp, and diode), how do you vary the potential difference across the component AND obtain negative readings?",
+        formulaBox: "RP4 circuit setup",
+        options: [
+          "Adjust a variable resistor (or variable DC power supply) to change p.d. in steps, and reverse the connections to the battery/power supply to obtain negative p.d. and current values",
+          "Heat the component with a Bunsen burner to change the voltage",
+          "Use an AC mains socket directly without a transformer",
+          "Add more voltmeters in series"
+        ],
+        correct: 0,
+        explanation: "Reversing the power supply leads reverses the polarity across the component so both positive and negative quadrants of the I–V graph can be plotted."
+      },
+      {
+        id: "P2_Q25",
+        tiers: ["foundation", "higher", "separate"],
+        isPractical: false,
+        subtopic: "Resistance, Ohm's Law & Required Practicals 3 & 4",
+        stem: "How does the resistance of a THERMISTOR change as its temperature increases, and where is a thermistor commonly used?",
+        formulaBox: "Temperature-dependent resistor",
+        options: [
+          "The resistance of a thermistor DECREASES as temperature increases; it is used in thermostats, incubators, and electronic thermometers",
+          "The resistance of a thermistor INCREASES as temperature increases",
+          "A thermistor's resistance stays completely constant at all temperatures",
+          "A thermistor is used to switch on street lamps when it gets dark"
+        ],
+        correct: 0,
+        explanation: "AQA specification: The resistance of a thermistor decreases as the temperature increases. Applications include thermostats."
+      },
+      {
+        id: "P2_Q26",
+        tiers: ["foundation", "higher", "separate"],
+        isPractical: false,
+        subtopic: "Resistance, Ohm's Law & Required Practicals 3 & 4",
+        stem: "How does the resistance of a LIGHT-DEPENDENT RESISTOR (LDR) change as light intensity increases, and what is a common application?",
+        formulaBox: "Light-dependent resistor",
+        options: [
+          "The resistance of an LDR DECREASES as light intensity increases (highest resistance in the dark); used in automatic night lights and street lamps",
+          "The resistance of an LDR INCREASES as light intensity increases",
+          "An LDR emits bright light when connected to a battery",
+          "An LDR's resistance depends only on temperature"
+        ],
+        correct: 0,
+        explanation: "AQA specification: The resistance of an LDR decreases as light intensity increases. Applications include switching lights on when it gets dark."
+      },
+      {
+        id: "P2_Q27",
+        tiers: ["higher", "separate"],
+        isPractical: false,
+        subtopic: "Resistance, Ohm's Law & Required Practicals 3 & 4",
+        stem: "An LDR and a fixed resistor are connected in SERIES across a 9.0 V battery. A voltmeter is connected in PARALLEL across the LDR to control a street lamp. Explain what happens to the voltmeter reading across the LDR when night falls (darkness).",
+        formulaBox: "Sensing circuit (potential divider principle)",
+        options: [
+          "In the dark, the LDR's resistance INCREASES sharply; therefore it takes a LARGER share of the 9.0 V battery potential difference, so the voltmeter reading across the LDR increases",
+          "In the dark, the LDR's resistance decreases, so the voltmeter reading drops to zero",
+          "In the dark, the total battery voltage increases to 18 V",
+          "The voltmeter reading stays fixed at 4.5 V regardless of light level"
+        ],
+        correct: 0,
+        explanation: "Classic 3-mark AQA Higher sensing circuit question: Darkness &rarr; LDR resistance increases &rarr; LDR takes a greater proportion of total circuit resistance &rarr; p.d. across LDR increases."
+      },
+      {
+        id: "P2_Q28",
+        tiers: ["higher", "separate"],
+        isPractical: false,
+        subtopic: "Resistance, Ohm's Law & Required Practicals 3 & 4",
+        stem: "A thermistor and a fixed resistor R are connected in series to a 12 V supply, with an alarm connected in parallel across the FIXED RESISTOR R. Explain why the p.d. across the fixed resistor R increases when a fire heats the thermistor.",
+        formulaBox: "Fire alarm sensing circuit",
+        options: [
+          "Heating the thermistor DECREASES its resistance, so total circuit resistance decreases and circuit current increases; since V = IR for the fixed resistor R, the p.d. across R increases (and p.d. across the thermistor decreases)",
+          "Heating the thermistor increases its resistance so current drops to zero",
+          "The fixed resistor's resistance doubles when the thermistor gets warm",
+          "Both the thermistor and fixed resistor get 12 V each"
+        ],
+        correct: 0,
+        explanation: "Because V<sub>supply</sub> = V<sub>thermistor</sub> + V<sub>R</sub>, when temperature rises, R<sub>thermistor</sub> drops &rarr; V<sub>thermistor</sub> drops &rarr; V<sub>R</sub> rises to trigger the alarm."
+      },
+      {
+        id: "P2_Q29",
+        tiers: ["higher", "separate"],
+        isPractical: true,
+        subtopic: "Resistance, Ohm's Law & Required Practicals 3 & 4",
+        stem: "Look at the I–V readings taken for a component in Required Practical 4. Is this component an OHMIC CONDUCTOR or a FILAMENT LAMP, and what is its resistance at 4.0 V?",
+        formulaBox: "<table class='data-table'><tr><th>Potential difference (V)</th><td>0.0</td><td>2.0</td><td>4.0</td><td>6.0</td></tr><tr><th>Current (A)</th><td>0.00</td><td>0.40</td><td>0.70</td><td>0.90</td></tr></table>",
+        options: [
+          "Filament lamp (ratio V/I increases from 5.0 &Omega; to 5.7 &Omega; to 6.7 &Omega;, so resistance is NOT constant); resistance at 4.0 V = 5.7 &Omega;",
+          "Ohmic conductor; resistance at 4.0 V = 2.8 &Omega;",
+          "Filament lamp; resistance at 4.0 V = 0.175 &Omega;",
+          "Diode; resistance at 4.0 V = 1.75 &Omega;"
+        ],
+        correct: 0,
+        explanation: "At 2.0 V, R = 2.0/0.40 = 5.0 &Omega;; at 4.0 V, R = 4.0/0.70 = 5.71 &Omega;; at 6.0 V, R = 6.0/0.90 = 6.67 &Omega;. Increasing resistance with voltage identifies a filament lamp."
+      },
+      {
+        id: "P2_Q30",
+        tiers: ["higher", "separate"],
+        isPractical: true,
+        subtopic: "Resistance, Ohm's Law & Required Practicals 3 & 4",
+        stem: "On a graph of Current (I on y-axis) against Potential Difference (V on x-axis) for two ohmic resistors X and Y, line X is STEEPER than line Y. Which resistor has the GREATER resistance?",
+        formulaBox: "Gradient of I–V graph = I / V = 1 / R",
+        options: [
+          "Resistor Y (a shallower gradient on an I–V graph means less current flows per volt, so resistance R = V/I is GREATER)",
+          "Resistor X (steeper gradient always means larger resistance)",
+          "Both resistors have the exact same resistance",
+          "Neither resistor obeys Ohm's law"
+        ],
+        correct: 0,
+        explanation: "Examiner Graph Trap: Because I is on the y-axis and V is on the x-axis, gradient = I/V = 1/R. Therefore, a SHALLOWER line has a HIGHER resistance!"
+      },
+      {
+        id: "P2_Q31",
+        tiers: ["foundation", "higher", "separate"],
+        isPractical: true,
+        subtopic: "Resistance, Ohm's Law & Required Practicals 3 & 4",
+        stem: "In Required Practical 3 (part 2), a student tests two identical 10 &Omega; resistors connected first in SERIES and then in PARALLEL. What will the total resistance be in each arrangement?",
+        formulaBox: "RP3 Part 2 — Series vs. Parallel Combinations",
+        options: [
+          "20 &Omega; in series; 5.0 &Omega; in parallel",
+          "5.0 &Omega; in series; 20 &Omega; in parallel",
+          "10 &Omega; in series; 10 &Omega; in parallel",
+          "100 &Omega; in series; 1.0 &Omega; in parallel"
+        ],
+        correct: 0,
+        explanation: "In series, R<sub>total</sub> = 10 + 10 = 20 &Omega;. In parallel, two identical branches halve the total resistance to 5.0 &Omega;."
+      },
+      {
+        id: "P2_Q32",
+        tiers: ["foundation", "higher", "separate"],
+        isPractical: false,
+        subtopic: "Resistance, Ohm's Law & Required Practicals 3 & 4",
+        stem: "What is the role of a VARIABLE RESISTOR in a simple lamp circuit?",
+        formulaBox: "Controlling circuit resistance and current",
+        options: [
+          "Changing its resistance changes the total resistance of the circuit, which alters the current flowing through the lamp (allowing its brightness to be dimmed or brightened)",
+          "It converts alternating current into direct current",
+          "It measures the potential difference across the battery",
+          "It acts as a safety fuse that melts at 13 A"
+        ],
+        correct: 0,
+        explanation: "Increasing the resistance of a variable resistor decreases the current in the series loop (I = V / R<sub>total</sub>)."
+      },
+      {
+        id: "P2_Q33",
+        tiers: ["foundation", "higher", "separate"],
+        isPractical: true,
+        subtopic: "Resistance, Ohm's Law & Required Practicals 3 & 4",
+        stem: "A 60 cm length of constantan wire has a resistance of 4.5 &Omega;. Assuming temperature stays constant, what is the resistance of a 100 cm length of the same wire?",
+        formulaBox: "R &prop; L",
+        options: [
+          "7.5 &Omega;",
+          "2.7 &Omega;",
+          "6.0 &Omega;",
+          "9.0 &Omega;"
+        ],
+        correct: 0,
+        explanation: "Resistance per cm = 4.5 &divide; 60 = 0.075 &Omega;/cm. For 100 cm: 0.075 &times; 100 = 7.5 &Omega;."
+      },
+      {
+        id: "P2_Q34",
+        tiers: ["higher", "separate"],
+        isPractical: false,
+        subtopic: "Resistance, Ohm's Law & Required Practicals 3 & 4",
+        stem: "Why does adding resistors in PARALLEL decrease the total resistance of a circuit rather than increase it?",
+        formulaBox: "Conceptual explanation of parallel resistance",
+        options: [
+          "Adding a parallel branch provides an extra pathway for charge to flow, so for the same battery potential difference a larger total current flows from the battery (and since R = V/I, larger I means smaller R<sub>total</sub>)",
+          "Because resistors in parallel cancel each other's atoms out",
+          "Because parallel wires are always half as long",
+          "Because the battery voltage doubles when a branch is added"
+        ],
+        correct: 0,
+        explanation: "AQA specification conceptual explanation: Adding a resistor in parallel provides an additional path for current, increasing total current for the same potential difference, hence reducing total resistance."
+      },
+
+      // ========================================================================
+      // 3. SERIES & PARALLEL CIRCUITS (12 Questions)
+      // ========================================================================
+      {
+        id: "P2_Q35",
+        tiers: ["foundation", "higher", "separate"],
+        isPractical: false,
+        subtopic: "Series & Parallel Circuits",
+        stem: "Which set of rules is COMPLETELY CORRECT for components connected in SERIES?",
+        formulaBox: "Series circuit rules",
+        options: [
+          "1. Same current through each component; 2. Total potential difference of power supply is shared between components (V<sub>total</sub> = V<sub>1</sub> + V<sub>2</sub>); 3. Total resistance equals the sum of individual resistances (R<sub>total</sub> = R<sub>1</sub> + R<sub>2</sub>)",
+          "1. Current splits between components; 2. Potential difference is the same across every component; 3. Total resistance is less than the smallest resistor",
+          "1. Same current through each component; 2. Same potential difference across each component; 3. R<sub>total</sub> = R<sub>1</sub> &times; R<sub>2</sub>",
+          "1. Current is zero; 2. Potential difference is shared; 3. Total resistance decreases when more resistors are added"
+        ],
+        correct: 0,
+        explanation: "AQA specification exact rules for series circuits: same current, shared p.d., and R<sub>total</sub> = R<sub>1</sub> + R<sub>2</sub>."
+      },
+      {
+        id: "P2_Q36",
+        tiers: ["foundation", "higher", "separate"],
+        isPractical: false,
+        subtopic: "Series & Parallel Circuits",
+        stem: "Which set of rules is COMPLETELY CORRECT for components connected in PARALLEL?",
+        formulaBox: "Parallel circuit rules",
+        options: [
+          "1. Potential difference across each component is the same; 2. Total current through the whole circuit is the sum of the currents through the separate components; 3. Total resistance of two resistors is LESS than the resistance of the smallest individual resistor",
+          "1. Potential difference is shared equally; 2. Same current in every branch; 3. Total resistance equals R<sub>1</sub> + R<sub>2</sub>",
+          "1. Potential difference is the same; 2. Current is the same; 3. Total resistance is greater than the largest resistor",
+          "1. Potential difference is zero; 2. Total current equals branch current minus supply current"
+        ],
+        correct: 0,
+        explanation: "AQA specification exact rules for parallel circuits: same p.d. across each branch, total current = sum of branch currents, and R<sub>total</sub> &lt; smallest branch resistor."
+      },
+      {
+        id: "P2_Q37",
+        tiers: ["foundation", "higher", "separate"],
+        isPractical: true,
+        subtopic: "Series & Parallel Circuits",
+        stem: "A 6.0 &Omega; resistor and an 18 &Omega; resistor are connected in SERIES to a 12 V battery. Calculate the current in the circuit and the potential difference across the 18 &Omega; resistor.",
+        formulaBox: "R<sub>total</sub> = R<sub>1</sub> + R<sub>2</sub>  |  I = V / R<sub>total</sub>  |  V<sub>2</sub> = I R<sub>2</sub>",
+        options: [
+          "Current = 0.50 A; p.d. across 18 &Omega; resistor = 9.0 V",
+          "Current = 2.0 A; p.d. across 18 &Omega; resistor = 3.0 V",
+          "Current = 0.50 A; p.d. across 18 &Omega; resistor = 12 V",
+          "Current = 0.67 A; p.d. across 18 &Omega; resistor = 6.0 V"
+        ],
+        correct: 0,
+        explanation: "R<sub>total</sub> = 6.0 + 18 = 24 &Omega;. Current I = 12 &divide; 24 = 0.50 A. Potential difference across 18 &Omega; = 0.50 &times; 18 = 9.0 V (and 3.0 V across the 6.0 &Omega; resistor: 3.0 + 9.0 = 12 V)."
+      },
+      {
+        id: "P2_Q38",
+        tiers: ["foundation", "higher", "separate"],
+        isPractical: true,
+        subtopic: "Series & Parallel Circuits",
+        stem: "Two resistors of 10 &Omega; and 40 &Omega; are connected in PARALLEL across a 20 V DC supply. Calculate the current in each branch and the total current leaving the supply.",
+        formulaBox: "V<sub>1</sub> = V<sub>2</sub> = 20 V  |  I<sub>total</sub> = I<sub>1</sub> + I<sub>2</sub>",
+        options: [
+          "I<sub>10&Omega;</sub> = 2.0 A, I<sub>40&Omega;</sub> = 0.50 A; Total current = 2.5 A",
+          "I<sub>10&Omega;</sub> = 0.50 A, I<sub>40&Omega;</sub> = 2.0 A; Total current = 2.5 A",
+          "I<sub>10&Omega;</sub> = 0.40 A, I<sub>40&Omega;</sub> = 0.40 A; Total current = 0.40 A",
+          "I<sub>10&Omega;</sub> = 2.0 A, I<sub>40&Omega;</sub> = 0.50 A; Total current = 1.5 A"
+        ],
+        correct: 0,
+        explanation: "Each branch gets the full 20 V: I<sub>10&Omega;</sub> = 20 &divide; 10 = 2.0 A; I<sub>40&Omega;</sub> = 20 &divide; 40 = 0.50 A. Total current = 2.0 + 0.50 = 2.5 A."
+      },
+      {
+        id: "P2_Q39",
+        tiers: ["foundation", "higher", "separate"],
+        isPractical: false,
+        subtopic: "Series & Parallel Circuits",
+        stem: "A 15 &Omega; resistor and a 60 &Omega; resistor are connected in PARALLEL. Without doing a full calculation, which value MUST be the total resistance of this parallel combination?",
+        formulaBox: "Parallel total resistance rule",
+        options: [
+          "12 &Omega; (because total resistance in parallel is always LESS than the smallest individual resistor, 15 &Omega;)",
+          "75 &Omega; (15 + 60)",
+          "37.5 &Omega; (the average of 15 and 60)",
+          "60 &Omega; (equal to the largest resistor)"
+        ],
+        correct: 0,
+        explanation: "AQA specification requires knowing that the total resistance of two resistors in parallel is less than the resistance of the smallest individual resistor (here &lt; 15 &Omega;, so only 12 &Omega; is valid)."
+      },
+      {
+        id: "P2_Q40",
+        tiers: ["foundation", "higher", "separate"],
+        isPractical: false,
+        subtopic: "Series & Parallel Circuits",
+        stem: "Why are household ceiling lights and wall sockets wired in PARALLEL rather than in series?",
+        formulaBox: "Practical advantages of parallel wiring",
+        options: [
+          "1. Every appliance receives the full 230 V mains potential difference; 2. Each appliance can be switched on/off independently without cutting current to the others (and if one bulb blows, the rest stay on)",
+          "1. Parallel circuits use less copper wire; 2. Each lamp receives a smaller voltage so it lasts longer",
+          "1. Parallel circuits have higher total resistance so current is tiny",
+          "1. Series circuits cannot carry alternating current"
+        ],
+        correct: 0,
+        explanation: "In a series circuit, switching off or breaking one lamp opens the entire loop so every light goes out, and voltage would be shared."
+      },
+      {
+        id: "P2_Q41",
+        tiers: ["higher", "separate"],
+        isPractical: true,
+        subtopic: "Series & Parallel Circuits",
+        stem: "In a series circuit powered by a 9.0 V battery, a fixed resistor R<sub>1</sub> = 12 &Omega; is connected in series with an unknown resistor R<sub>2</sub>. A voltmeter across R<sub>1</sub> reads 3.6 V. Calculate the resistance of R<sub>2</sub>.",
+        formulaBox: "V<sub>total</sub> = V<sub>1</sub> + V<sub>2</sub>  and  I = V<sub>1</sub> / R<sub>1</sub>",
+        options: [
+          "18 &Omega;",
+          "8.0 &Omega;",
+          "30 &Omega;",
+          "5.4 &Omega;"
+        ],
+        correct: 0,
+        explanation: "Current I = V<sub>1</sub> &divide; R<sub>1</sub> = 3.6 &divide; 12 = 0.30 A. Potential difference across R<sub>2</sub> = 9.0 &minus; 3.6 = 5.4 V. Therefore R<sub>2</sub> = 5.4 &divide; 0.30 = 18 &Omega;."
+      },
+      {
+        id: "P2_Q42",
+        tiers: ["higher", "separate"],
+        isPractical: true,
+        subtopic: "Series & Parallel Circuits",
+        stem: "A 12 V battery supplies a parallel circuit with two branches. Branch 1 contains a 24 &Omega; resistor. The total current leaving the battery is 0.80 A. Calculate the resistance of Branch 2.",
+        formulaBox: "I<sub>total</sub> = I<sub>1</sub> + I<sub>2</sub>  and  R<sub>2</sub> = V / I<sub>2</sub>",
+        options: [
+          "40 &Omega;",
+          "15 &Omega;",
+          "24 &Omega;",
+          "9.0 &Omega;"
+        ],
+        correct: 0,
+        explanation: "Current in Branch 1: I<sub>1</sub> = 12 &divide; 24 = 0.50 A. Current in Branch 2: I<sub>2</sub> = 0.80 &minus; 0.50 = 0.30 A. Resistance of Branch 2: R<sub>2</sub> = 12 &divide; 0.30 = 40 &Omega;."
+      },
+      {
+        id: "P2_Q43",
+        tiers: ["foundation", "higher", "separate"],
+        isPractical: false,
+        subtopic: "Series & Parallel Circuits",
+        stem: "In a parallel circuit, the total current entering a junction is 1.4 A. One branch carries 0.9 A. What current flows through the other branch?",
+        formulaBox: "Current conservation at a junction",
+        options: [
+          "0.5 A",
+          "2.3 A",
+          "1.4 A",
+          "0.9 A"
+        ],
+        correct: 0,
+        explanation: "I<sub>total</sub> = I<sub>1</sub> + I<sub>2</sub> &rArr; 1.4 = 0.9 + I<sub>2</sub> &rArr; I<sub>2</sub> = 0.5 A."
+      },
+      {
+        id: "P2_Q44",
+        tiers: ["higher", "separate"],
+        isPractical: true,
+        subtopic: "Series & Parallel Circuits",
+        stem: "A circuit has a 4.0 &Omega; resistor in series with a parallel pair of two identical 12 &Omega; resistors. What is the TOTAL resistance of the entire combination?",
+        formulaBox: "Combined series-parallel network",
+        options: [
+          "10 &Omega;",
+          "28 &Omega;",
+          "16 &Omega;",
+          "6.0 &Omega;"
+        ],
+        correct: 0,
+        explanation: "Two identical 12 &Omega; resistors in parallel have a combined resistance of 6.0 &Omega;. Adding the 4.0 &Omega; series resistor gives 4.0 + 6.0 = 10 &Omega;."
+      },
+      {
+        id: "P2_Q45",
+        tiers: ["foundation", "higher", "separate"],
+        isPractical: false,
+        subtopic: "Series & Parallel Circuits",
+        stem: "When more resistors are added in SERIES to a circuit with a fixed battery voltage, what happens to the total resistance and the circuit current?",
+        formulaBox: "Adding series components",
+        options: [
+          "Total resistance INCREASES, so the current DECREASES",
+          "Total resistance DECREASES, so the current INCREASES",
+          "Both total resistance and current stay unchanged",
+          "Total resistance increases and current increases"
+        ],
+        correct: 0,
+        explanation: "R<sub>total</sub> = R<sub>1</sub> + R<sub>2</sub> + ..., so adding series resistors increases total resistance and reduces current (I = V/R<sub>total</sub>)."
+      },
+      {
+        id: "P2_Q46",
+        tiers: ["higher", "separate"],
+        isPractical: false,
+        subtopic: "Series & Parallel Circuits",
+        stem: "Two resistors R<sub>1</sub> = 5 &Omega; and R<sub>2</sub> = 15 &Omega; are connected in series. What fraction of the total supply potential difference is across R<sub>2</sub>?",
+        formulaBox: "Voltage division in series",
+        options: [
+          "3/4 (75%) of the supply potential difference",
+          "1/4 (25%) of the supply potential difference",
+          "1/3 (33%) of the supply potential difference",
+          "100% of the supply potential difference"
+        ],
+        correct: 0,
+        explanation: "Total resistance = 5 + 15 = 20 &Omega;. R<sub>2</sub> is 15/20 = 3/4 (75%) of the total resistance, so it receives 75% of the supply potential difference."
+      },
+
+      // ========================================================================
+      // 4. DOMESTIC USES, MAINS ELECTRICITY, POWER & NATIONAL GRID (16 Qs)
+      // ========================================================================
+      {
+        id: "P2_Q47",
+        tiers: ["foundation", "higher", "separate"],
+        isPractical: false,
+        subtopic: "Domestic Uses, Mains Electricity, Power & The National Grid",
+        stem: "What are the frequency and potential difference of the UK MAINS ELECTRICITY supply, and is it AC or DC?",
+        formulaBox: "UK domestic mains specification",
+        options: [
+          "Alternating current (AC) with a frequency of 50 Hz and a potential difference of about 230 V",
+          "Direct current (DC) with a frequency of 50 Hz and a potential difference of 230 V",
+          "Alternating current (AC) with a frequency of 60 Hz and a potential difference of 110 V",
+          "Direct current (DC) with a frequency of 0 Hz and a potential difference of 12 V"
+        ],
+        correct: 0,
+        explanation: "AQA specification exact figures: Mains electricity is an ac supply. In the United Kingdom the domestic electricity supply has a frequency of 50 Hz and is about 230 V."
+      },
+      {
+        id: "P2_Q48",
+        tiers: ["foundation", "higher", "separate"],
+        isPractical: false,
+        subtopic: "Domestic Uses, Mains Electricity, Power & The National Grid",
+        stem: "What is the fundamental difference between DIRECT CURRENT (DC) and ALTERNATING CURRENT (AC)?",
+        formulaBox: "Cells/batteries (DC) vs. Mains supply (AC)",
+        options: [
+          "In DC, charge flows in one direction only (potential difference stays constant polarity); in AC, the current and potential difference repeatedly reverse direction",
+          "DC is only used in the National Grid, whereas AC comes from AA batteries",
+          "In AC, electrons travel at the speed of light; in DC, protons move",
+          "DC has a frequency of 50 Hz, whereas AC has a frequency of 0 Hz"
+        ],
+        correct: 0,
+        explanation: "Cells and batteries supply direct current (DC); mains electricity is an alternating current (AC) supply."
+      },
+      {
+        id: "P2_Q49",
+        tiers: ["foundation", "higher", "separate"],
+        isPractical: false,
+        subtopic: "Domestic Uses, Mains Electricity, Power & The National Grid",
+        stem: "Match the THREE wires inside a standard UK three-core mains cable to their correct insulation colours and potentials.",
+        formulaBox: "UK 3-pin plug wiring",
+        options: [
+          "Live wire = BROWN (~230 V alternating potential); Neutral wire = BLUE (at or close to earth potential, 0 V); Earth wire = GREEN AND YELLOW STRIPES (safety wire at 0 V, carries current only if a fault occurs)",
+          "Live wire = BLUE (230 V); Neutral wire = BROWN (0 V); Earth wire = RED (230 V)",
+          "Live wire = GREEN/YELLOW (230 V); Neutral wire = BROWN (0 V); Earth wire = BLUE (0 V)",
+          "Live wire = BLACK (0 V); Neutral wire = BROWN (230 V); Earth wire = BLUE (230 V)"
+        ],
+        correct: 0,
+        explanation: "AQA specification exact colours and roles: Live (brown, carries alternating potential from supply), Neutral (blue, completes circuit at ~0 V), Earth (green and yellow stripes, safety wire at 0 V)."
+      },
+      {
+        id: "P2_Q50",
+        tiers: ["foundation", "higher", "separate"],
+        isPractical: false,
+        subtopic: "Domestic Uses, Mains Electricity, Power & The National Grid",
+        stem: "Why is a FUSE and an ON/OFF SWITCH always connected to the LIVE wire rather than the neutral wire?",
+        formulaBox: "Electrical safety in domestic appliances",
+        options: [
+          "So that when the switch is open or the fuse melts, the appliance is completely disconnected from the high 230 V live potential—if placed on the neutral wire, the appliance would remain live at 230 V and could give a fatal electric shock even when switched off",
+          "Because current only flows through the live wire and never enters the neutral wire",
+          "Because the neutral wire is made of plastic",
+          "Because fuses only melt when connected to brown insulation"
+        ],
+        correct: 0,
+        explanation: "AQA specification: Explain the dangers of providing any connection between the live wire and earth (a person touching a live wire at 230 V provides a low-resistance path to earth at 0 V, causing a large dangerous current)."
+      },
+      {
+        id: "P2_Q51",
+        tiers: ["higher", "separate"],
+        isPractical: false,
+        subtopic: "Domestic Uses, Mains Electricity, Power & The National Grid",
+        stem: "An electric toaster has a metal casing and is earthed via its 3-pin plug. Inside the toaster, the live wire breaks loose and touches the metal casing. Explain how the EARTH WIRE and FUSE protect a user from electric shock.",
+        formulaBox: "Fault protection mechanism (3–4 mark AQA classic)",
+        options: [
+          "The earth wire provides a very low-resistance path from the metal casing to the ground; a large surge of current flows through the live and earth wires, which melts (blows) the fuse and breaks the circuit, isolating the casing from the 230 V supply",
+          "The earth wire absorbs the 230 V and turns it into harmless static electricity without blowing the fuse",
+          "The earth wire connects the metal casing to the live wire so the toaster keeps working",
+          "The neutral wire melts and cuts off the earth wire"
+        ],
+        correct: 0,
+        explanation: "Low resistance of earth wire &rarr; very large current surge &rarr; fuse wire heats up and melts &rarr; circuit broken &rarr; metal casing is no longer live."
+      },
+      {
+        id: "P2_Q52",
+        tiers: ["foundation", "higher", "separate"],
+        isPractical: false,
+        subtopic: "Domestic Uses, Mains Electricity, Power & The National Grid",
+        stem: "Why do 'DOUBLE INSULATED' appliances (marked with a square-within-a-square symbol, such as plastic hairdryers) NOT need an earth wire?",
+        formulaBox: "Two-core cable appliances",
+        options: [
+          "Their outer casing is made of an electrical insulator (plastic) and internal live parts have extra insulation, so the outer casing can never become live even if an internal wire comes loose",
+          "Because they operate at 0 V",
+          "Because plastic conducts electricity safely into the air",
+          "Because they have a 100 A fuse inside"
+        ],
+        correct: 0,
+        explanation: "With a non-conducting plastic casing, there is no exposed metal part that could become live, eliminating the need for an earth wire."
+      },
+      {
+        id: "P2_Q53",
+        tiers: ["foundation", "higher", "separate"],
+        isPractical: true,
+        subtopic: "Domestic Uses, Mains Electricity, Power & The National Grid",
+        stem: "An electric kettle plugged into the 230 V mains draws a current of 9.5 A. Calculate its power rating and choose the most suitable standard UK plug fuse (3 A, 5 A, or 13 A).",
+        formulaBox: "P = I V",
+        options: [
+          "Power = 2185 W (2.19 kW); suitable fuse = 13 A",
+          "Power = 24.2 W; suitable fuse = 3 A",
+          "Power = 2185 W; suitable fuse = 5 A",
+          "Power = 239.5 W; suitable fuse = 13 A"
+        ],
+        correct: 0,
+        explanation: "P = I &times; V = 9.5 &times; 230 = 2185 W. The fuse rating must be slightly HIGHER than the normal operating current (9.5 A), so a 13 A fuse is required (a 3 A or 5 A fuse would blow immediately during normal use)."
+      },
+      {
+        id: "P2_Q54",
+        tiers: ["higher", "separate"],
+        isPractical: true,
+        subtopic: "Domestic Uses, Mains Electricity, Power & The National Grid",
+        stem: "A current of 4.0 A flows through a heating resistor of resistance 15 &Omega;. Calculate the electrical power dissipated in the resistor.",
+        formulaBox: "P = I<sup>2</sup> R",
+        options: [
+          "240 W",
+          "60 W",
+          "900 W",
+          "3.75 W"
+        ],
+        correct: 0,
+        explanation: "P = I<sup>2</sup> &times; R = 4.0<sup>2</sup> &times; 15 = 16 &times; 15 = 240 W. (Common mistake: forgetting to square I gives 60 W!)"
+      },
+      {
+        id: "P2_Q55",
+        tiers: ["higher", "separate"],
+        isPractical: true,
+        subtopic: "Domestic Uses, Mains Electricity, Power & The National Grid",
+        stem: "A 12 V car battery transfers 450 C of charge through the starter motor. Calculate the electrical work done (energy transferred) by the battery.",
+        formulaBox: "E = Q V",
+        options: [
+          "5400 J (5.4 kJ)",
+          "37.5 J",
+          "0.027 J",
+          "462 J"
+        ],
+        correct: 0,
+        explanation: "E = Q &times; V = 450 &times; 12 = 5400 J."
+      },
+      {
+        id: "P2_Q56",
+        tiers: ["foundation", "higher", "separate"],
+        isPractical: true,
+        subtopic: "Domestic Uses, Mains Electricity, Power & The National Grid",
+        stem: "A 2.0 kW electric heater is used for 30 minutes. Calculate the energy transferred in joules (J).",
+        formulaBox: "E = P t  |  1 kW = 1000 W  |  1 min = 60 s",
+        options: [
+          "3,600,000 J (3.6 MJ)",
+          "60,000 J",
+          "60 J",
+          "180,000 J"
+        ],
+        correct: 0,
+        explanation: "P = 2000 W; t = 30 &times; 60 = 1800 s. E = 2000 &times; 1800 = 3,600,000 J."
+      },
+      {
+        id: "P2_Q57",
+        tiers: ["foundation", "higher", "separate"],
+        isPractical: false,
+        subtopic: "Domestic Uses, Mains Electricity, Power & The National Grid",
+        stem: "What is the NATIONAL GRID?",
+        formulaBox: "Electricity distribution system",
+        options: [
+          "A system of cables and transformers linking power stations to consumers across the country",
+          "A single giant battery buried beneath London",
+          "The underground network of gas pipes supplying boilers",
+          "A satellite system that beams solar power to houses"
+        ],
+        correct: 0,
+        explanation: "AQA specification exact definition: The National Grid is a system of cables and transformers linking power stations to consumers."
+      },
+      {
+        id: "P2_Q58",
+        tiers: ["foundation", "higher", "separate"],
+        isPractical: false,
+        subtopic: "Domestic Uses, Mains Electricity, Power & The National Grid",
+        stem: "What are the roles of STEP-UP TRANSFORMERS and STEP-DOWN TRANSFORMERS in the National Grid?",
+        formulaBox: "Power stations &rarr; Step-up &rarr; Pylons &rarr; Step-down &rarr; Homes",
+        options: [
+          "Step-up transformers increase the potential difference from power stations to the transmission cables (up to ~400,000 V); Step-down transformers decrease the potential difference to a much lower, safer value (230 V) for domestic use",
+          "Step-up transformers decrease voltage to 230 V; Step-down transformers increase voltage to 400,000 V",
+          "Step-up transformers convert AC to DC; Step-down transformers convert DC to AC",
+          "Both step-up and step-down transformers increase the frequency from 50 Hz to 500 Hz"
+        ],
+        correct: 0,
+        explanation: "AQA specification: Step-up transformers are used to increase the potential difference from the power station to the transmission cables then step-down transformers are used to decrease, to a much lower value, the potential difference for domestic use."
+      },
+      {
+        id: "P2_Q59",
+        tiers: ["higher", "separate"],
+        isPractical: false,
+        subtopic: "Domestic Uses, Mains Electricity, Power & The National Grid",
+        stem: "Explain why transmitting electrical power across the National Grid at a VERY HIGH POTENTIAL DIFFERENCE (~400,000 V) makes the system much more efficient.",
+        formulaBox: "P = I V  and  P<sub>loss</sub> = I<sup>2</sup> R",
+        options: [
+          "For a given power (P = IV), stepping up the potential difference greatly REDUCES the current (I) in the transmission cables; since power wasted as heat in cables is P = I<sup>2</sup>R, a smaller current dramatically reduces thermal energy lost to the surroundings",
+          "Higher potential difference makes the copper cables shorter",
+          "Higher potential difference increases the current so electricity arrives faster",
+          "At 400,000 V the resistance of steel cables becomes zero"
+        ],
+        correct: 0,
+        explanation: "Classic 3-mark AQA Higher explanation: High V &rarr; low I (for fixed P = IV) &rarr; much less heating in cables (P = I<sup>2</sup>R) &rarr; less energy dissipated to surroundings &rarr; higher efficiency."
+      },
+      {
+        id: "P2_Q60",
+        tiers: ["higher", "separate"],
+        isPractical: true,
+        subtopic: "Domestic Uses, Mains Electricity, Power & The National Grid",
+        stem: "A transmission cable has a resistance of 5.0 &Omega;. Compare the power wasted as heat when carrying a current of 200 A versus when a step-up transformer reduces the current to 20 A (a factor of 10 smaller).",
+        formulaBox: "P<sub>loss</sub> = I<sup>2</sup> R",
+        options: [
+          "At 200 A, P<sub>loss</sub> = 200,000 W (200 kW); at 20 A, P<sub>loss</sub> = 2000 W (2 kW) — reducing current by 10&times; reduces power loss by 100&times; (10<sup>2</sup>)",
+          "At 200 A, P<sub>loss</sub> = 1000 W; at 20 A, P<sub>loss</sub> = 100 W",
+          "Power loss is 200,000 W in both cases",
+          "Reducing current by 10&times; reduces power loss by 2&times;"
+        ],
+        correct: 0,
+        explanation: "At 200 A: 200<sup>2</sup> &times; 5.0 = 40,000 &times; 5 = 200,000 W. At 20 A: 20<sup>2</sup> &times; 5.0 = 400 &times; 5 = 2000 W. Because of I<sup>2</sup>, 1/10th the current produces 1/100th the wasted heat!"
+      },
+      {
+        id: "P2_Q61",
+        tiers: ["foundation", "higher", "separate"],
+        isPractical: false,
+        subtopic: "Domestic Uses, Mains Electricity, Power & The National Grid",
+        stem: "Which two factors determine the total amount of energy an electrical appliance transfers?",
+        formulaBox: "E = P t",
+        options: [
+          "The power rating of the appliance (in watts) and the time it is switched on for (in seconds)",
+          "The colour of the plug and the length of the flex",
+          "Only the fuse rating inside the plug",
+          "The mass of the appliance and its height above the floor"
+        ],
+        correct: 0,
+        explanation: "AQA specification: The amount of energy an appliance transfers depends on how long the appliance is switched on for and the power of the appliance."
+      },
+      {
+        id: "P2_Q62",
+        tiers: ["higher", "separate"],
+        isPractical: true,
+        subtopic: "Domestic Uses, Mains Electricity, Power & The National Grid",
+        stem: "A 100% efficient step-down transformer reduces mains p.d. from 230 V to 11.5 V to power a halogen desk lamp rated at 46 W. Calculate the current drawn from the 230 V mains (primary) supply.",
+        formulaBox: "P<sub>primary</sub> = P<sub>secondary</sub>  &rArr;  I<sub>p</sub> V<sub>p</sub> = P",
+        options: [
+          "0.20 A",
+          "4.0 A",
+          "2.0 A",
+          "0.050 A"
+        ],
+        correct: 0,
+        explanation: "For a 100% efficient transformer, input power = output power = 46 W. Primary current I<sub>p</sub> = 46 &divide; 230 = 0.20 A (while secondary current is 46 &divide; 11.5 = 4.0 A)."
+      },
+
+      // ========================================================================
+      // 5. STATIC ELECTRICITY & ELECTRIC FIELDS [SEPARATE 8463] (12 Questions)
+      // ========================================================================
+      {
+        id: "P2_Q63",
+        tiers: ["separate"],
+        isPractical: false,
+        subtopic: "Static Electricity & Electric Fields",
+        stem: "When a dry polythene rod is rubbed with a woollen cloth, the polythene rod becomes NEGATIVELY charged and the cloth becomes POSITIVELY charged. Explain how this happens in terms of subatomic particles.",
+        formulaBox: "Charging insulators by friction (AQA 8463)",
+        options: [
+          "Friction transfers negatively charged ELECTRONS from the woollen cloth onto the polythene rod (leaving the polythene with an excess of electrons and the cloth with a deficit of electrons; protons never move)",
+          "Friction transfers positively charged protons from the polythene rod onto the cloth",
+          "Friction creates new electrons inside the polythene rod",
+          "Neutrons move from the cloth onto the polythene rod"
+        ],
+        correct: 0,
+        explanation: "AQA 8463 exact rule: When certain insulating materials are rubbed against each other they become electrically charged. Negatively charged electrons are rubbed off one material and on to the other. Protons are bound inside atomic nuclei and NEVER move!"
+      },
+      {
+        id: "P2_Q64",
+        tiers: ["separate"],
+        isPractical: false,
+        subtopic: "Static Electricity & Electric Fields",
+        stem: "A negatively charged acetate strip is suspended freely by a thread. When a second charged rod is brought near, the acetate strip is REPELLED away. What can you deduce about the charge on the second rod?",
+        formulaBox: "Electrostatic forces (non-contact forces)",
+        options: [
+          "The second rod MUST also be NEGATIVELY charged (because like/same charges repel, whereas an uncharged object would be weakly attracted by induction)",
+          "The second rod must be positively charged",
+          "The second rod must be completely neutral (uncharged)",
+          "The second rod is a magnet"
+        ],
+        correct: 0,
+        explanation: "AQA 8463 specification: Two electrically charged objects exert a force on each other. Two objects that carry the same type of charge repel. Two objects that carry different types of charge attract. Attraction and repulsion between two charged objects are examples of non-contact force."
+      },
+      {
+        id: "P2_Q65",
+        tiers: ["separate"],
+        isPractical: false,
+        subtopic: "Static Electricity & Electric Fields",
+        stem: "Why can a copper metal rod held in your bare hand NOT be given a lasting static charge by rubbing it with a cloth?",
+        formulaBox: "Conductors vs. Insulators",
+        options: [
+          "Because copper and the human body are electrical conductors, so any electrons transferred immediately flow through the copper and your body to the Earth",
+          "Because copper atoms have no electrons",
+          "Because metals are too smooth to create friction",
+          "Because copper destroys electric charge"
+        ],
+        correct: 0,
+        explanation: "Static charge builds up on INSULATORS because electrons cannot flow freely away through the material to Earth."
+      },
+      {
+        id: "P2_Q66",
+        tiers: ["separate"],
+        isPractical: false,
+        subtopic: "Static Electricity & Electric Fields",
+        stem: "Before pumping aviation fuel into an aircraft, a conducting EARTHING CABLE is connected between the fuel tanker and the aircraft. Explain why this safety step is essential.",
+        formulaBox: "Preventing electrostatic sparking",
+        options: [
+          "Friction as fuel flows through pipes builds up large static charge and a high potential difference; the earthing cable allows electrons to flow safely to the ground so no spark jumps across the air gap to ignite flammable fuel vapour",
+          "The earthing cable pumps fuel faster into the aircraft",
+          "The earthing cable cools the jet fuel below 0 &deg;C",
+          "The earthing cable charges the aircraft batteries"
+        ],
+        correct: 0,
+        explanation: "High p.d. ionises the air, allowing a spark to jump; earthing equalises potential and discharges static safely."
+      },
+      {
+        id: "P2_Q67",
+        tiers: ["separate"],
+        isPractical: false,
+        subtopic: "Static Electricity & Electric Fields",
+        stem: "What is an ELECTRIC FIELD, and what direction do electric field lines ALWAYS point?",
+        formulaBox: "Representing electric fields (AQA 8463)",
+        options: [
+          "A region around a charged object where another charged object experiences an electrostatic force; field lines point in the direction of the force on a POSITIVE charge (AWAY from positive, TOWARDS negative)",
+          "A region around a magnet; field lines point from north to south",
+          "Field lines always point TOWARDS positive charges and AWAY from negative charges",
+          "Electric fields only exist inside copper wires"
+        ],
+        correct: 0,
+        explanation: "AQA 8463 convention: Electric field arrows show the direction of force on a small positive test charge—always pointing OUTWARDS from positive charges and INWARDS towards negative charges."
+      },
+      {
+        id: "P2_Q68",
+        tiers: ["separate"],
+        isPractical: false,
+        subtopic: "Static Electricity & Electric Fields",
+        stem: "Describe the shape and direction of the ELECTRIC FIELD PATTERN around an isolated, negatively charged metal sphere.",
+        formulaBox: "Radial electric field pattern",
+        options: [
+          "Straight radial lines spaced evenly around the sphere pointing INWARDS towards the centre of the negatively charged sphere, getting closer together near the surface where the field is strongest",
+          "Straight radial lines pointing OUTWARDS away from the sphere",
+          "Concentric circles around the sphere with no arrows",
+          "Parallel horizontal lines pointing from left to right"
+        ],
+        correct: 0,
+        explanation: "AQA 8463 required diagram: Isolated charged sphere produces a radial field; for a negative sphere, arrows point radially INWARDS."
+      },
+      {
+        id: "P2_Q69",
+        tiers: ["separate"],
+        isPractical: false,
+        subtopic: "Static Electricity & Electric Fields",
+        stem: "Describe the ELECTRIC FIELD PATTERN between two large, flat parallel metal plates—the top plate positively charged and the bottom plate negatively charged.",
+        formulaBox: "Uniform electric field between parallel plates",
+        options: [
+          "Straight, parallel, equally spaced vertical field lines pointing straight DOWNWARDS from the positive top plate to the negative bottom plate (indicating a uniform field strength between the plates)",
+          "Curved lines pointing upwards from the negative plate to the positive plate",
+          "Radial lines spreading outwards from the centre only",
+          "Zero electric field anywhere between the plates"
+        ],
+        correct: 0,
+        explanation: "Parallel, equally spaced lines between oppositely charged plates show a UNIFORM electric field pointing from + to &minus;."
+      },
+      {
+        id: "P2_Q70",
+        tiers: ["separate"],
+        isPractical: false,
+        subtopic: "Static Electricity & Electric Fields",
+        stem: "How does the strength of the electric field around a charged object change as you move FURTHER AWAY from the object, and how is this shown on a field diagram?",
+        formulaBox: "Field strength vs. Distance",
+        options: [
+          "The electric field gets WEAKER as distance increases; this is shown by the electric field lines spreading FURTHER APART",
+          "The electric field gets STRONGER as distance increases; shown by lines getting closer together",
+          "The electric field stays constant at all distances from a point charge",
+          "Field strength drops to zero 1 mm from the surface"
+        ],
+        correct: 0,
+        explanation: "AQA 8463 specification: The strength of an electric field depends on the distance from the charged object—the closer the lines, the stronger the field."
+      },
+      {
+        id: "P2_Q71",
+        tiers: ["separate"],
+        isPractical: false,
+        subtopic: "Static Electricity & Electric Fields",
+        stem: "Why can a negatively charged balloon stick to an UNCHARGED (neutral) painted wall?",
+        formulaBox: "Charging by induction / Surface polarisation",
+        options: [
+          "The negatively charged balloon repels electrons in the wall's surface atoms slightly deeper into the wall, leaving a net positive charge on the wall's surface which attracts the negatively charged balloon",
+          "The wall transfers protons into the balloon",
+          "The balloon becomes magnetic when rubbed on hair",
+          "Neutral objects always repel negatively charged objects"
+        ],
+        correct: 0,
+        explanation: "Repelling electrons on the wall's surface leaves positive nuclei closer to the balloon, creating a net attractive electrostatic force."
+      },
+      {
+        id: "P2_Q72",
+        tiers: ["separate"],
+        isPractical: false,
+        subtopic: "Static Electricity & Electric Fields",
+        stem: "Explain how a SPARK jumps across a small air gap between a negatively charged metal dome (such as a Van de Graaff generator) and an earthed metal sphere.",
+        formulaBox: "Dielectric breakdown / Ionisation of air",
+        options: [
+          "A very high potential difference creates a strong electric field across the air gap that rips electrons off air molecules (ionising the air so it becomes a conductor), allowing electrons to jump across the gap as a spark",
+          "Air molecules melt into liquid water which conducts electricity",
+          "Protons jump from the earthed sphere to the negative dome",
+          "Sparks only occur in a complete vacuum with zero gas molecules"
+        ],
+        correct: 0,
+        explanation: "AQA 8463 specification: Explain how the concept of an electric field helps to explain the non-contact force between charged objects as well as other electrostatic phenomena such as sparking."
+      },
+      {
+        id: "P2_Q73",
+        tiers: ["separate"],
+        isPractical: false,
+        subtopic: "Static Electricity & Electric Fields",
+        stem: "A tiny positively charged oil droplet is placed inside a uniform vertical electric field pointing UPWARDS. What is the direction of the electrostatic force acting on the positive oil droplet?",
+        formulaBox: "Force on a positive charge in an electric field",
+        options: [
+          "UPWARDS (in the same direction as the electric field lines)",
+          "DOWNWARDS (opposite to the electric field lines)",
+          "Horizontally to the left",
+          "Zero electrostatic force"
+        ],
+        correct: 0,
+        explanation: "By definition, electric field lines show the direction of the force on a POSITIVE charge (whereas a negative electron experiences a force in the opposite direction to the field lines)."
+      },
+      {
+        id: "P2_Q74",
+        tiers: ["separate"],
+        isPractical: false,
+        subtopic: "Static Electricity & Electric Fields",
+        stem: "Two identical small conducting spheres carry charges of +4 nC and &minus;4 nC and are placed 5 cm apart. Which diagram feature correctly describes the electric field lines between them?",
+        formulaBox: "Field between opposite point charges (+ and &minus;)",
+        options: [
+          "Curved field lines starting at the +4 nC sphere and terminating on the &minus;4 nC sphere, with arrows pointing from + to &minus;",
+          "Field lines bending away from each other in the middle with a neutral point between them",
+          "Arrows pointing from the &minus;4 nC sphere towards the +4 nC sphere",
+          "No field lines connecting the two spheres"
+        ],
+        correct: 0,
+        explanation: "Opposite charges attract, and field lines run continuously from the positive sphere to the negative sphere."
+      }
+    ];
+
+    /* ==========================================================================
+       APPLICATION STATE
+       ========================================================================== */
+    const configState = {
+      studentName: "",
+      studentEmail: "",
+      tier: "higher",         // 'foundation' | 'higher' | 'separate'
+      focus: "all",           // 'all' | 'practicals'
+      questionCount: 20
+    };
+
+    const quizState = {
+      questions: [],
+      currentIndex: 0,
+      answers: [],            // { question, selectedIndex, isCorrect }
+      answeredCurrent: false,
+      isRetryMode: false
+    };
+
+    const TIER_META = {
+      foundation: { name: "Foundation Tier", badge: "Foundation Tier Selected" },
+      higher: { name: "Higher Tier", badge: "Higher Tier Selected" },
+      separate: { name: "Separate Physics", badge: "Separate Physics Selected" }
+    };
+
+    const FOCUS_META = {
+      all: "All Electricity Topics",
+      practicals: "Required Practicals & Calculations Only"
+    };
+
+    /* ==========================================================================
+       CONFIGURATION SCREEN INTERACTIONS
+       ========================================================================== */
+    function getFilteredPool() {
+      return QUESTION_POOL.filter(q => {
+        const tierMatch = q.tiers.includes(configState.tier);
+        const focusMatch = configState.focus === "all" ? true : q.isPractical === true;
+        return tierMatch && focusMatch;
+      });
+    }
+
+    function updateConfigUI() {
+      ["foundation", "higher", "separate"].forEach(t => {
+        const card = document.getElementById(`tier-card-${t}`);
+        const isSel = configState.tier === t;
+        card.classList.toggle("selected", isSel);
+        card.setAttribute("aria-checked", isSel ? "true" : "false");
+      });
+      document.getElementById("selected-tier-badge").textContent = TIER_META[configState.tier].badge;
+
+      ["all", "practicals"].forEach(f => {
+        const card = document.getElementById(`focus-card-${f}`);
+        const chk = document.getElementById(`focus-check-${f}`);
+        const isSel = configState.focus === f;
+        card.classList.toggle("selected", isSel);
+        card.setAttribute("aria-checked", isSel ? "true" : "false");
+        chk.classList.toggle("hidden", !isSel);
+      });
+
+      document.querySelectorAll(".count-btn").forEach(btn => {
+        const val = Number(btn.getAttribute("data-count"));
+        btn.classList.toggle("active", val === configState.questionCount);
+      });
+
+      const pool = getFilteredPool();
+      const focusSuffix = configState.focus === "practicals" ? " (Practicals & Calculations)" : "";
+      document.getElementById("available-q-label").textContent =
+        `${pool.length} unique questions available for ${TIER_META[configState.tier].name}${focusSuffix}`;
+
+      const capBanner = document.getElementById("cap-feedback-banner");
+      const effectiveCount = Math.min(configState.questionCount, pool.length);
+
+      if (configState.questionCount > pool.length) {
+        capBanner.textContent =
+          `Note: ${TIER_META[configState.tier].name}${focusSuffix} has ${pool.length} unique questions in the bank, so your quiz will run all ${pool.length} available unique questions.`;
+        capBanner.classList.remove("hidden");
+      } else {
+        capBanner.classList.add("hidden");
+      }
+
+      document.getElementById("btn-start-quiz").innerHTML =
+        `Start ${TIER_META[configState.tier].name} Quiz (${effectiveCount} Questions) &rarr;`;
+    }
+
+    function selectTier(tierKey) {
+      configState.tier = tierKey;
+      updateConfigUI();
+    }
+
+    function selectFocus(focusKey) {
+      configState.focus = focusKey;
+      updateConfigUI();
+    }
+
+    function selectCount(num) {
+      configState.questionCount = num;
+      updateConfigUI();
+    }
+
+    function shuffleArray(arr) {
+      const copy = [...arr];
+      for (let i = copy.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [copy[i], copy[j]] = [copy[j], copy[i]];
+      }
+      return copy;
+    }
+
+    function launchConfiguredQuiz() {
+      const nameInput = document.getElementById("student-name");
+      const errorMsg = document.getElementById("name-error-msg");
+      const rawName = nameInput.value.trim();
+
+      if (!rawName) {
+        nameInput.classList.remove("input-error");
+        void nameInput.offsetWidth;
+        nameInput.classList.add("input-error");
+        errorMsg.classList.remove("hidden");
+        nameInput.focus();
+        return;
+      }
+
+      nameInput.classList.remove("input-error");
+      errorMsg.classList.add("hidden");
+
+      configState.studentName = rawName;
+      configState.studentEmail = document.getElementById("student-email").value.trim();
+
+      const pool = shuffleArray(getFilteredPool());
+      const selectedQuestions = pool.slice(0, Math.min(configState.questionCount, pool.length));
+
+      quizState.questions = selectedQuestions;
+      quizState.currentIndex = 0;
+      quizState.answers = [];
+      quizState.answeredCurrent = false;
+      quizState.isRetryMode = false;
+
+      switchScreen("view-quiz");
+      document.getElementById("banner-main-title").textContent = "Topic 2: Electricity";
+      document.getElementById("banner-main-sub").textContent =
+        `${TIER_META[configState.tier].name} • ${FOCUS_META[configState.focus]}`;
+
+      renderActiveQuestion();
+    }
+
+    function startRetryMissed() {
+      const missedQuestions = quizState.answers
+        .filter(item => !item.isCorrect)
+        .map(item => item.question);
+
+      if (missedQuestions.length === 0) return;
+
+      quizState.questions = missedQuestions;
+      quizState.currentIndex = 0;
+      quizState.answers = [];
+      quizState.answeredCurrent = false;
+      quizState.isRetryMode = true;
+
+      switchScreen("view-quiz");
+      renderActiveQuestion();
+    }
+
+    function returnToConfig() {
+      switchScreen("view-config");
+      document.getElementById("banner-main-title").textContent = "Configure Your Electricity Quiz";
+      document.getElementById("banner-main-sub").textContent =
+        "Enter your name, choose your tier, select either all Topic 2 content or Required Practicals & Calculations only, and pick your question count.";
+      updateConfigUI();
+    }
+
+    function switchScreen(activeId) {
+      ["view-config", "view-quiz", "view-report"].forEach(id => {
+        document.getElementById(id).classList.toggle("hidden", id !== activeId);
+      });
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+
+    /* ==========================================================================
+       ACTIVE QUIZ RENDERING & LOGIC
+       ========================================================================== */
+    function renderActiveQuestion() {
+      const total = quizState.questions.length;
+      const idx = quizState.currentIndex;
+      const qObj = quizState.questions[idx];
+      quizState.answeredCurrent = false;
+
+      document.getElementById("hud-student-pill").textContent = configState.studentName;
+      document.getElementById("hud-tier-pill").textContent = TIER_META[configState.tier].name;
+      document.getElementById("hud-focus-pill").textContent = FOCUS_META[configState.focus];
+      document.getElementById("hud-retry-pill").classList.toggle("hidden", !quizState.isRetryMode);
+
+      const scoreSoFar = quizState.answers.filter(a => a.isCorrect).length;
+      document.getElementById("hud-live-score").textContent = `Score: ${scoreSoFar} / ${quizState.answers.length}`;
+      document.getElementById("hud-counter").textContent = `Question ${idx + 1} of ${total}`;
+
+      const pct = Math.round((idx / total) * 100);
+      document.getElementById("quiz-progress-fill").style.width = `${pct}%`;
+
+      const kickerEl = document.getElementById("q-kicker-label");
+      kickerEl.innerHTML = `<span>Question ${idx + 1} of ${total} &bull; ${qObj.subtopic}</span>` +
+        (qObj.isPractical ? `<span class="rp-badge">PRACTICAL / CALCULATION</span>` : "");
+
+      document.getElementById("q-stem-text").innerHTML = qObj.stem;
+
+      const formulaBox = document.getElementById("q-formula-box");
+      if (qObj.formulaBox) {
+        formulaBox.innerHTML = qObj.formulaBox;
+        formulaBox.classList.remove("hidden");
+      } else {
+        formulaBox.classList.add("hidden");
+      }
+
+      const optionsContainer = document.getElementById("quiz-options-list");
+      optionsContainer.innerHTML = "";
+      const letters = ["A", "B", "C", "D"];
+
+      qObj.options.forEach((optText, optIdx) => {
+        const btn = document.createElement("button");
+        btn.type = "button";
+        btn.className = "opt-btn";
+        btn.innerHTML = `
+          <span class="opt-letter">${letters[optIdx]}</span>
+          <span>${optText}</span>
+        `;
+        btn.addEventListener("click", () => submitOption(optIdx));
+        optionsContainer.appendChild(btn);
+      });
+
+      const fbPanel = document.getElementById("quiz-feedback-panel");
+      fbPanel.className = "feedback-panel hidden";
+
+      const nextBtn = document.getElementById("btn-next-question");
+      nextBtn.classList.add("hidden");
+      nextBtn.innerHTML = idx === total - 1 ? "View Diagnostic Report &rarr;" : "Next Question &rarr;";
+    }
+
+    function submitOption(selectedIdx) {
+      if (quizState.answeredCurrent) return;
+      quizState.answeredCurrent = true;
+
+      const qObj = quizState.questions[quizState.currentIndex];
+      const isCorrect = selectedIdx === qObj.correct;
+
+      quizState.answers.push({
+        question: qObj,
+        selectedIndex: selectedIdx,
+        isCorrect: isCorrect
+      });
+
+      const scoreSoFar = quizState.answers.filter(a => a.isCorrect).length;
+      document.getElementById("hud-live-score").textContent = `Score: ${scoreSoFar} / ${quizState.answers.length}`;
+
+      const total = quizState.questions.length;
+      const donePct = Math.round(((quizState.currentIndex + 1) / total) * 100);
+      document.getElementById("quiz-progress-fill").style.width = `${donePct}%`;
+
+      const optionBtns = document.querySelectorAll("#quiz-options-list .opt-btn");
+      optionBtns.forEach((btn, idx) => {
+        btn.disabled = true;
+        if (idx === qObj.correct) {
+          btn.classList.add("correct");
+        } else if (idx === selectedIdx && !isCorrect) {
+          btn.classList.add("incorrect");
+        } else {
+          btn.classList.add("dimmed");
+        }
+      });
+
+      const fbPanel = document.getElementById("quiz-feedback-panel");
+      const fbStatus = document.getElementById("fb-status-text");
+      const fbInsight = document.getElementById("fb-insight-text");
+
+      fbPanel.classList.remove("hidden", "fb-pass", "fb-fail");
+      if (isCorrect) {
+        fbPanel.classList.add("fb-pass");
+        fbStatus.textContent = "✓ Correct — Full Marks!";
+      } else {
+        fbPanel.classList.add("fb-fail");
+        const correctLetter = ["A", "B", "C", "D"][qObj.correct];
+        fbStatus.textContent = `✗ Incorrect — Correct Answer: Option ${correctLetter}`;
+      }
+      fbInsight.innerHTML = qObj.explanation;
+
+      document.getElementById("btn-next-question").classList.remove("hidden");
+    }
+
+    function advanceQuestion() {
+      if (quizState.currentIndex < quizState.questions.length - 1) {
+        quizState.currentIndex++;
+        renderActiveQuestion();
+      } else {
+        showDiagnosticReport();
+      }
+    }
+
+    /* ==========================================================================
+       DIAGNOSTIC RESULTS DASHBOARD
+       ========================================================================== */
+    function showDiagnosticReport() {
+      switchScreen("view-report");
+      document.getElementById("banner-main-title").textContent = "Topic 2 Diagnostic Performance Report";
+      document.getElementById("banner-main-sub").textContent =
+        `Completed by ${configState.studentName}${configState.studentEmail ? ` (${configState.studentEmail})` : ""} • ${TIER_META[configState.tier].name} • ${FOCUS_META[configState.focus]}`;
+
+      const total = quizState.answers.length;
+      const correct = quizState.answers.filter(a => a.isCorrect).length;
+      const missed = total - correct;
+      const pct = Math.round((correct / total) * 100);
+
+      document.getElementById("rep-student-header").textContent =
+        `${configState.studentName} • ${TIER_META[configState.tier].name} • ${FOCUS_META[configState.focus]}${quizState.isRetryMode ? " (Retry Round)" : ""}`;
+      document.getElementById("rep-pct-val").textContent = `${pct}%`;
+      document.getElementById("rep-frac-val").textContent = `(${correct} / ${total})`;
+      document.getElementById("rep-grade-pill").textContent = estimateAqaGrade(pct, configState.tier);
+
+      const msgEl = document.getElementById("rep-msg-text");
+      if (pct === 100) {
+        msgEl.textContent = `Outstanding work, ${configState.studentName}! You scored 100% across every question. Your AQA Topic 2 Electricity knowledge and circuit calculation skills are exam-ready.`;
+      } else if (pct >= 80) {
+        msgEl.textContent = `Strong performance, ${configState.studentName}! You have a solid command of Electricity. Click 'Retry Missed Questions' below to master the final ${missed} question${missed === 1 ? "" : "s"}.`;
+      } else if (pct >= 50) {
+        msgEl.textContent = `Good progress, ${configState.studentName}! Review the amber and red sub-topics below, study the AQA Examiner Insights, and retry your missed questions to push into the top grade boundaries.`;
+      } else {
+        msgEl.textContent = `Great active recall practice, ${configState.studentName}! Focus on the Priority Revision sub-topics in red below, read the tailored AQA revision guidance, and retry your missed questions.`;
+      }
+
+      const retryBtn = document.getElementById("btn-retry-missed");
+      if (missed > 0) {
+        retryBtn.classList.remove("hidden");
+        retryBtn.textContent = `Retry Missed Questions (${missed})`;
+      } else {
+        retryBtn.classList.add("hidden");
+      }
+
+      const topicMap = {};
+      quizState.answers.forEach(entry => {
+        const t = entry.question.subtopic;
+        if (!topicMap[t]) topicMap[t] = { correct: 0, total: 0 };
+        topicMap[t].total++;
+        if (entry.isCorrect) topicMap[t].correct++;
+      });
+
+      const masteryGrid = document.getElementById("rep-mastery-grid");
+      masteryGrid.innerHTML = "";
+
+      Object.keys(topicMap).forEach(topicName => {
+        const { correct: c, total: t } = topicMap[topicName];
+        const subPct = Math.round((c / t) * 100);
+
+        let chipClass = "sc-weak";
+        let fillClass = "fill-r";
+        let statusLabel = "Priority Revision";
+
+        if (subPct >= 80) {
+          chipClass = "sc-strong";
+          fillClass = "fill-g";
+          statusLabel = "Strong Area";
+        } else if (subPct >= 50) {
+          chipClass = "sc-dev";
+          fillClass = "fill-a";
+          statusLabel = "Developing";
+        }
+
+        const tip = subPct >= 80
+          ? "Secure understanding demonstrated—maintain with spaced active recall."
+          : (SUBTOPIC_GUIDANCE[topicName] || "Review examiner insights and retry missed questions in this sub-topic.");
+
+        const card = document.createElement("div");
+        card.className = "mastery-item";
+        card.innerHTML = `
+          <div class="mastery-item-top">
+            <span class="mastery-name">${topicName}</span>
+            <div class="mastery-right">
+              <span class="status-chip ${chipClass}">${statusLabel}</span>
+              <span style="font-size:0.84rem; font-weight:700; color:var(--slate-700);">${c}/${t} (${subPct}%)</span>
+            </div>
+          </div>
+          <div class="mastery-bar-track">
+            <div class="mastery-bar-fill ${fillClass}" style="width: ${subPct}%"></div>
+          </div>
+          <div class="mastery-tip">${tip}</div>
+        `;
+        masteryGrid.appendChild(card);
+      });
+
+      const reviewList = document.getElementById("rep-review-list");
+      reviewList.innerHTML = "";
+      reviewList.classList.add("hidden");
+      document.getElementById("btn-toggle-review").textContent = "Show Full Question-by-Question Review";
+
+      const letters = ["A", "B", "C", "D"];
+      quizState.answers.forEach((entry, idx) => {
+        const q = entry.question;
+        const userAns = `${letters[entry.selectedIndex]}. ${q.options[entry.selectedIndex]}`;
+        const rightAns = `${letters[q.correct]}. ${q.options[q.correct]}`;
+
+        const item = document.createElement("div");
+        item.className = `review-card ${entry.isCorrect ? "rc-ok" : "rc-bad"}`;
+        item.innerHTML = `
+          <div class="rc-kicker">Question ${idx + 1} &bull; ${q.subtopic} &bull; ${entry.isCorrect ? "Correct" : "Incorrect"}</div>
+          <div class="rc-q">${q.stem}</div>
+          <div class="rc-ans"><strong>Your Answer:</strong> <span style="color:${entry.isCorrect ? "var(--emerald-700)" : "var(--rose-600)"}; font-weight:600;">${userAns}</span></div>
+          ${!entry.isCorrect ? `<div class="rc-ans"><strong>Correct Answer:</strong> <span style="color:var(--emerald-700); font-weight:600;">${rightAns}</span></div>` : ""}
+          <div class="rc-exp"><strong>AQA Examiner Insight:</strong> ${q.explanation}</div>
+        `;
+        reviewList.appendChild(item);
+      });
+    }
+
+    function estimateAqaGrade(pct, tier) {
+      if (tier === "foundation") {
+        if (pct >= 80) return "Estimated AQA Indicator: Grade 4–5 (Maximum Foundation)";
+        if (pct >= 62) return "Estimated AQA Indicator: Grade 4 (Standard Pass)";
+        if (pct >= 45) return "Estimated AQA Indicator: Grade 3";
+        return "Estimated AQA Indicator: Grade 1–2 (Keep Practising)";
+      }
+      if (pct >= 80) return "Estimated AQA Indicator: Grade 8–9";
+      if (pct >= 65) return "Estimated AQA Indicator: Grade 6–7";
+      if (pct >= 48) return "Estimated AQA Indicator: Grade 4–5";
+      return "Estimated AQA Indicator: Grade 3 / Below (Target Revision)";
+    }
+
+    function toggleReviewSection() {
+      const list = document.getElementById("rep-review-list");
+      const btn = document.getElementById("btn-toggle-review");
+      const isHidden = list.classList.toggle("hidden");
+      btn.textContent = isHidden ? "Show Full Question-by-Question Review" : "Hide Full Question-by-Question Review";
+      if (!isHidden) {
+        list.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    }
+
+    /* ==========================================================================
+       KEYBOARD SHORTCUTS & INITIALISATION
+       ========================================================================== */
+    document.getElementById("student-name").addEventListener("input", function () {
+      if (this.value.trim()) {
+        this.classList.remove("input-error");
+        document.getElementById("name-error-msg").classList.add("hidden");
+      }
+    });
+
+    document.addEventListener("keydown", function (e) {
+      if (document.getElementById("view-quiz").classList.contains("hidden")) return;
+      const key = e.key.toUpperCase();
+      if (!quizState.answeredCurrent) {
+        if (key === "1" || key === "A") submitOption(0);
+        else if (key === "2" || key === "B") submitOption(1);
+        else if (key === "3" || key === "C") submitOption(2);
+        else if (key === "4" || key === "D") submitOption(3);
+      } else if (e.key === "Enter") {
+        e.preventDefault();
+        advanceQuestion();
+      }
+    });
+
+    updateConfigUI();
+  </script>
+</body>
+</html>
